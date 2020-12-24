@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="青春流年" type="application/atom+xml">
+</head>
 
 
 
@@ -102,17 +105,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
     </a>
     
   </li>
@@ -205,17 +197,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -431,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/CANVAS/">
-                                <span class="chip bg-color">canvas</span>
+                            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">小程序</span>
                             </a>
                         
                     </div>
@@ -445,6 +426,10 @@
                         
                             <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
                                 小程序
+                            </a>
+                        
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/CANVAS/" class="post-category">
+                                Canvas
                             </a>
                         
                     </div>
@@ -461,16 +446,39 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-24
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.1k
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    5 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -493,10 +501,196 @@
 </blockquote>
 
 
-<h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;canvas style=<span class="string">&quot;width:750px;height:777px;position:absolute;top:0px;left:-2000px;&quot;</span> id=<span class="string">&quot;canvas&quot;</span> type=<span class="string">&quot;2d&quot;</span>&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>canvas style<span class="token operator">=</span><span class="token string">"width:750px;height:777px;position:absolute;top:0px;left:-2000px;"</span> id<span class="token operator">=</span><span class="token string">"canvas"</span> type<span class="token operator">=</span><span class="token string">"2d"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><h3 id="drawCanvas-js"><a href="#drawCanvas-js" class="headerlink" title="drawCanvas.js"></a>drawCanvas.js</h3><p> [单独创建drawCanvas.js存放一些公共函数,里面封装了图片渲染文字换行等一些方法(由于画布无法直接使用网络图片，所以需要 wx.downloadFile或者wx.getImageInfo把它下载回来才能使用,本文使用wx.downloadFile)]</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// 下载图片函数</span></span><br><span class="line">  <span class="function"><span class="title">downloadImg</span>(<span class="params">img</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//将网络图片转成本地路径     </span></span><br><span class="line">      <span class="comment">// wx.getImageInfo(&#123;</span></span><br><span class="line">      <span class="comment">//   src: img,</span></span><br><span class="line">      <span class="comment">//   success: function (res) &#123;</span></span><br><span class="line">      <span class="comment">//     resolve(res.path)</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;)</span></span><br><span class="line">      <span class="comment">//方法二</span></span><br><span class="line">      wx.downloadFile(&#123;</span><br><span class="line">        url: img,</span><br><span class="line">        success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">let</span> cover = res.tempFilePath;</span><br><span class="line">          resolve(cover)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">          reject(err)</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//图片渲染</span></span><br><span class="line">  <span class="function"><span class="title">drawImage</span>(<span class="params">canvas, ctx, imgUrl, x, y, w, h</span>)</span> &#123;</span><br><span class="line">    ctx.save();</span><br><span class="line">    <span class="keyword">const</span> img = canvas.createImage();</span><br><span class="line">    img.src = imgUrl</span><br><span class="line">    img.onload = <span class="function">() =&gt;</span> ctx.drawImage(img, x, y, w, h);</span><br><span class="line">    ctx.closePath();</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//文字换行</span></span><br><span class="line">  drawTxt: <span class="function"><span class="keyword">function</span> (<span class="params">ctx, _str, _x, _y, _total, _lineh, _linenum</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (_str == <span class="string">&quot;&quot;</span> || _str == <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> total = _total ? _total : <span class="number">15</span>; <span class="comment">//每行字数（数字算半个）</span></span><br><span class="line">    <span class="keyword">var</span> lineH = _lineh ? _lineh : <span class="number">20</span>; <span class="comment">//行间距</span></span><br><span class="line">    <span class="keyword">var</span> lineNum = _linenum ? _linenum : <span class="number">4</span>; <span class="comment">//最大显示行数</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    拆解字符串到数组，按行，每行15个（判断数字占半个，其他占1个）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">var</span> lineArray = [];</span><br><span class="line">    <span class="keyword">var</span> len = <span class="number">0</span>; <span class="comment">//数字算半个，中文算一个</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; _str.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> line = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">Math</span>.ceil(len) % total == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (lineArray[lineArray.length - <span class="number">1</span>] != <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">          lineArray.push(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">var</span> index = <span class="built_in">Math</span>.floor(len / total); <span class="comment">//</span></span><br><span class="line">      lineArray[index] = lineArray[index] + _str[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(_str[i])) &#123;</span><br><span class="line">        <span class="comment">//是数字</span></span><br><span class="line">        len = len + <span class="number">0.5</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        len = len + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lineArray.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> t_str = lineArray[i];</span><br><span class="line">      <span class="keyword">if</span> (lineArray.length &gt; lineNum &amp;&amp; i == (lineNum - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="comment">//如果总行数大于设定的行数，则到最大设定行时，加省略号，退出</span></span><br><span class="line">        t_str = t_str + <span class="string">&#x27;...&#x27;</span></span><br><span class="line">        ctx.fillText(t_str, _x, _y + lineH * i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ctx.fillText(t_str, _x, _y + lineH * i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//裁切圆角  </span></span><br><span class="line">  drawRoundRect: <span class="function"><span class="keyword">function</span> (<span class="params">cxt, x, y, width, height, radius</span>) </span>&#123;</span><br><span class="line">    cxt.save()</span><br><span class="line">    cxt.beginPath();</span><br><span class="line">    cxt.arc(x + radius, y + radius, radius, <span class="built_in">Math</span>.PI, <span class="built_in">Math</span>.PI * <span class="number">3</span> / <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(width - radius + x, y);</span><br><span class="line">    cxt.arc(width - radius + x, radius + y, radius, <span class="built_in">Math</span>.PI * <span class="number">3</span> / <span class="number">2</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(width + x, height + y - radius);</span><br><span class="line">    cxt.arc(width - radius + x, height - radius + y, radius, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">1</span> / <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(radius + x, height + y);</span><br><span class="line">    cxt.arc(radius + x, height - radius + y, radius, <span class="built_in">Math</span>.PI * <span class="number">1</span> / <span class="number">2</span>, <span class="built_in">Math</span>.PI);</span><br><span class="line">    cxt.closePath();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="在Canvas-js引入drawCanvas-js"><a href="#在Canvas-js引入drawCanvas-js" class="headerlink" title="在Canvas.js引入drawCanvas.js"></a>在Canvas.js引入drawCanvas.js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> drawCanvas <span class="keyword">from</span> <span class="string">&#x27;drawCanvas.js&#x27;</span>;</span><br><span class="line">Page(<span class="built_in">Object</span>.assign(&#123;&#125;,drawCanvas, &#123;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 页面的初始数据</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    canvasImg: <span class="string">&#x27;https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2635355882,2630309952&amp;fm=218&amp;app=2&amp;f=JPEG?w=121&amp;h=75&amp;s=FF7204C5C0615D0773AD7CD103003098&#x27;</span> <span class="comment">// 实例</span></span><br><span class="line">  &#125;,</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面加载</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.shareCreate()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//分享微信朋友圈</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">shareCreate</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    <span class="comment">//self.downloadImg是drawCanvas.js里面方法</span></span><br><span class="line">    <span class="keyword">let</span> imgUrl = <span class="keyword">await</span> self.downloadImg(self.data.canvasImg);</span><br><span class="line">    wx.nextTick(<span class="function">() =&gt;</span> &#123; self.drawAll(imgUrl) &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">    <span class="function"><span class="title">drawAll</span>(<span class="params">imgUrl</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">const</span> node = query.select(<span class="string">&#x27;#canvas&#x27;</span>).node();</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    node.exec(<span class="keyword">async</span> res =&gt; &#123;</span><br><span class="line">      <span class="keyword">const</span> canvas = res[<span class="number">0</span>].node;</span><br><span class="line">      <span class="comment">//设置宽高</span></span><br><span class="line">      canvas.width = canvas._width</span><br><span class="line">      canvas.height = canvas._height</span><br><span class="line">      <span class="keyword">const</span> ctx = canvas.getContext(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">      <span class="comment">//背景图</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, <span class="string">&quot;/images/shareImg.png&quot;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">777</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//cover</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//logo</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">50</span>, <span class="number">525</span>, <span class="number">363</span>, <span class="number">45</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">        <span class="comment">//背景透明</span></span><br><span class="line">        ctx.fillStyle = <span class="string">&#x27;rgba(0, 0, 0, 0.6)&#x27;</span>;</span><br><span class="line">        ctx.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line">        <span class="comment">//绘制空心矩形</span></span><br><span class="line">        ctx.strokeStyle = <span class="string">&#x27;rgba(0, 0, 0, 0.6)&#x27;</span>;</span><br><span class="line">        ctx.strokeRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line">        ctx.save();</span><br><span class="line">        <span class="comment">//title</span></span><br><span class="line">        ctx.textAlign = <span class="string">&#x27;left&#x27;</span>;</span><br><span class="line">        ctx.fillStyle = <span class="string">&#x27;rgba(255, 255, 255, 1)&#x27;</span>;</span><br><span class="line">        ctx.font = <span class="string">&quot;normal bold 41px PingFangSC-Regular&quot;</span>;</span><br><span class="line">        self.drawTxt(ctx, <span class="string">&quot;测试卡片&quot;</span>, <span class="number">50</span>, <span class="number">390</span>, <span class="number">30</span>, <span class="number">50</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//desc</span></span><br><span class="line">        ctx.textAlign = <span class="string">&#x27;left&#x27;</span>;</span><br><span class="line">        ctx.fillStyle = <span class="string">&quot;#1e1e1e&quot;</span>;</span><br><span class="line">        ctx.font = <span class="string">&quot;normal normal 28px PingFangSC-Regular&quot;</span>;</span><br><span class="line">        self.drawTxt(ctx, <span class="string">&quot;测试卡片测试卡片测试卡测试卡片片测试卡片测试卡片测试卡片测试卡片测试卡片测试卡片片测试卡片测试卡片&quot;</span>, <span class="number">159</span>, <span class="number">661</span>, <span class="number">18</span>, <span class="number">43</span>, <span class="number">2</span>);</span><br><span class="line">        <span class="comment">//裁切圆角 </span></span><br><span class="line">        self.drawRoundRect(ctx, <span class="number">50</span>, <span class="number">625</span>, <span class="number">92</span>, <span class="number">92</span>, <span class="number">46</span>);</span><br><span class="line">        ctx.clip();</span><br><span class="line">        ctx.stroke();</span><br><span class="line">        <span class="comment">//头像</span></span><br><span class="line">        <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">50</span>, <span class="number">625</span>, <span class="number">92</span>, <span class="number">92</span>);</span><br><span class="line">        ctx.restore();</span><br><span class="line">        ctx.closePath();</span><br><span class="line">        <span class="comment">//canvas转成图片</span></span><br><span class="line">        self.previewHB(canvas)</span><br><span class="line">      &#125;, <span class="number">500</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">   <span class="comment">//图片预览</span></span><br><span class="line">  <span class="function"><span class="title">previewHB</span>(<span class="params">canvas</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    wx.nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//转换图片</span></span><br><span class="line">      wx.canvasToTempFilePath(&#123;</span><br><span class="line">        canvas: canvas,</span><br><span class="line">        success:<span class="keyword">async</span> (res)=&gt; &#123;</span><br><span class="line">          <span class="keyword">let</span> img=res.tempFilePath</span><br><span class="line">          <span class="comment">//预览</span></span><br><span class="line">          wx.previewImage(&#123;</span><br><span class="line">            urls: [img]</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 下载图片函数</span>
+  <span class="token function">downloadImg</span><span class="token punctuation">(</span><span class="token parameter">img</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//将网络图片转成本地路径     </span>
+      <span class="token comment">// wx.getImageInfo({</span>
+      <span class="token comment">//   src: img,</span>
+      <span class="token comment">//   success: function (res) {</span>
+      <span class="token comment">//     resolve(res.path)</span>
+
+      <span class="token comment">//   }</span>
+      <span class="token comment">// })</span>
+      <span class="token comment">//方法二</span>
+      wx<span class="token punctuation">.</span><span class="token function">downloadFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token operator">:</span> img<span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> cover <span class="token operator">=</span> res<span class="token punctuation">.</span>tempFilePath<span class="token punctuation">;</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span>cover<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">fail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+          <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">//图片渲染</span>
+  <span class="token function">drawImage</span><span class="token punctuation">(</span><span class="token parameter">canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> img <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">createImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    img<span class="token punctuation">.</span>src <span class="token operator">=</span> imgUrl
+    img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">//文字换行</span>
+  <span class="token function-variable function">drawTxt</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> _str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y<span class="token punctuation">,</span> _total<span class="token punctuation">,</span> _lineh<span class="token punctuation">,</span> _linenum</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_str <span class="token operator">==</span> <span class="token string">""</span> <span class="token operator">||</span> _str <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> total <span class="token operator">=</span> _total <span class="token operator">?</span> _total <span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">;</span> <span class="token comment">//每行字数（数字算半个）</span>
+    <span class="token keyword">var</span> lineH <span class="token operator">=</span> _lineh <span class="token operator">?</span> _lineh <span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment">//行间距</span>
+    <span class="token keyword">var</span> lineNum <span class="token operator">=</span> _linenum <span class="token operator">?</span> _linenum <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment">//最大显示行数</span>
+
+    <span class="token comment">/*
+    拆解字符串到数组，按行，每行15个（判断数字占半个，其他占1个）
+    */</span>
+    <span class="token keyword">var</span> lineArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//数字算半个，中文算一个</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> _str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> line <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span> <span class="token operator">%</span> total <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>lineArray<span class="token punctuation">[</span>lineArray<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          lineArray<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">var</span> index <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>len <span class="token operator">/</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//</span>
+      lineArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> lineArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> _str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isNaN</span><span class="token punctuation">(</span>_str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//是数字</span>
+        len <span class="token operator">=</span> len <span class="token operator">+</span> <span class="token number">0.5</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        len <span class="token operator">=</span> len <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> lineArray<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> t_str <span class="token operator">=</span> lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>lineArray<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> lineNum <span class="token operator">&amp;&amp;</span> i <span class="token operator">==</span> <span class="token punctuation">(</span>lineNum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//如果总行数大于设定的行数，则到最大设定行时，加省略号，退出</span>
+        t_str <span class="token operator">=</span> t_str <span class="token operator">+</span> <span class="token string">'...'</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span>t_str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y <span class="token operator">+</span> lineH <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span>t_str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y <span class="token operator">+</span> lineH <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">//裁切圆角  </span>
+  <span class="token function-variable function">drawRoundRect</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">cxt<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> radius</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cxt<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    cxt<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>x <span class="token operator">+</span> radius<span class="token punctuation">,</span> y <span class="token operator">+</span> radius<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>width <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">+</span> y <span class="token operator">-</span> radius<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">-</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">-</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="在Canvas-js引入drawCanvas-js"><a href="#在Canvas-js引入drawCanvas-js" class="headerlink" title="在Canvas.js引入drawCanvas.js"></a>在Canvas.js引入drawCanvas.js</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> drawCanvas <span class="token keyword">from</span> <span class="token string">'drawCanvas.js'</span><span class="token punctuation">;</span>
+<span class="token function">Page</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>drawCanvas<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+ <span class="token comment">/**
+   * 页面的初始数据
+   */</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    canvasImg<span class="token operator">:</span> <span class="token string">'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2635355882,2630309952&amp;fm=218&amp;app=2&amp;f=JPEG?w=121&amp;h=75&amp;s=FF7204C5C0615D0773AD7CD103003098'</span> <span class="token comment">// 实例</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token comment">/**
+   * 生命周期函数--监听页面加载
+   */</span>
+  <span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shareCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">//分享微信朋友圈</span>
+  <span class="token keyword">async</span> <span class="token function">shareCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">//self.downloadImg是drawCanvas.js里面方法</span>
+    <span class="token keyword">let</span> imgUrl <span class="token operator">=</span> <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">downloadImg</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>data<span class="token punctuation">.</span>canvasImg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> self<span class="token punctuation">.</span><span class="token function">drawAll</span><span class="token punctuation">(</span>imgUrl<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">drawAll</span><span class="token punctuation">(</span><span class="token parameter">imgUrl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> query <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> node <span class="token operator">=</span> query<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'#canvas'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">node</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    node<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> canvas <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>node<span class="token punctuation">;</span>
+      <span class="token comment">//设置宽高</span>
+      canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> canvas<span class="token punctuation">.</span>_width
+      canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> canvas<span class="token punctuation">.</span>_height
+      <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">//背景图</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> <span class="token string">"/images/shareImg.png"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">777</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//cover</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//logo</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">525</span><span class="token punctuation">,</span> <span class="token number">363</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">//背景透明</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgba(0, 0, 0, 0.6)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//绘制空心矩形</span>
+        ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> <span class="token string">'rgba(0, 0, 0, 0.6)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//title</span>
+        ctx<span class="token punctuation">.</span>textAlign <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgba(255, 255, 255, 1)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">"normal bold 41px PingFangSC-Regular"</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span><span class="token function">drawTxt</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token string">"测试卡片"</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">390</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//desc</span>
+        ctx<span class="token punctuation">.</span>textAlign <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">"#1e1e1e"</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">"normal normal 28px PingFangSC-Regular"</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span><span class="token function">drawTxt</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token string">"测试卡片测试卡片测试卡测试卡片片测试卡片测试卡片测试卡片测试卡片测试卡片测试卡片片测试卡片测试卡片"</span><span class="token punctuation">,</span> <span class="token number">159</span><span class="token punctuation">,</span> <span class="token number">661</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">43</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//裁切圆角 </span>
+        self<span class="token punctuation">.</span><span class="token function">drawRoundRect</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">625</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">46</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">clip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//头像</span>
+        <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">625</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">restore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//canvas转成图片</span>
+        self<span class="token punctuation">.</span><span class="token function">previewHB</span><span class="token punctuation">(</span>canvas<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token comment">//图片预览</span>
+  <span class="token function">previewHB</span><span class="token punctuation">(</span><span class="token parameter">canvas</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//转换图片</span>
+      wx<span class="token punctuation">.</span><span class="token function">canvasToTempFilePath</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        canvas<span class="token operator">:</span> canvas<span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> img<span class="token operator">=</span>res<span class="token punctuation">.</span>tempFilePath
+          <span class="token comment">//预览</span>
+          wx<span class="token punctuation">.</span><span class="token function">previewImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            urls<span class="token operator">:</span> <span class="token punctuation">[</span>img<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="希望大家能够用到！"><a href="#希望大家能够用到！" class="headerlink" title="希望大家能够用到！"></a>希望大家能够用到！</h2>
                 
             </div>
@@ -561,8 +755,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/CANVAS/">
-                                    <span class="chip bg-color">canvas</span>
+                                <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">小程序</span>
                                 </a>
                             
                         </div>
@@ -573,9 +767,6 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
 
     
 
@@ -583,132 +774,6 @@
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -763,9 +828,21 @@
                                     Vue
                                 </a>
                             
+                            <a href="/categories/VUE/VANT/" class="post-category">
+                                    Vant
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/VUE/">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -812,7 +889,7 @@
                 <div class="card-action article-tags">
                     
                     <a href="/tags/ES6/">
-                        <span class="chip bg-color">es6</span>
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>
@@ -1014,6 +1091,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/haobaic/haobaic.github.io" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">4.7k</span>&nbsp;字
+            
             
             
             
@@ -1061,11 +1141,11 @@
 
 
 
-<!-- 
+
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
- -->
+
 </div>
     </div>
 </footer>

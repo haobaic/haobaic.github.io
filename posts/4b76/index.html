@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="青春流年" type="application/atom+xml">
+</head>
 
 
 
@@ -102,17 +105,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
     </a>
     
   </li>
@@ -205,17 +197,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -429,9 +410,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/VUE/">
+                                <span class="chip bg-color">Vue</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -441,6 +426,10 @@
                         
                             <a href="/categories/VUE/" class="post-category">
                                 Vue
+                            </a>
+                        
+                            <a href="/categories/VUE/VANT/" class="post-category">
+                                Vant
                             </a>
                         
                     </div>
@@ -457,16 +446,39 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-24
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    406
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
@@ -475,10 +487,64 @@
             <div id="articleContent">
                 <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用vant中Tab 标签, 点击显示会出现下划线位置异常,如下图:</p>
 <p><img src="https://img-blog.csdnimg.cn/20201030133509406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;van-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;isShow = !isShow&quot;</span>&gt;点击显示&lt;/van-button&gt;</span><br><span class="line">    &lt;div v-show=<span class="string">&quot;isShow&quot;</span>&gt;</span><br><span class="line">      &lt;van-tabs v-model=<span class="string">&quot;active&quot;</span>&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 1&quot;</span>&gt;内容 <span class="number">1</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 2&quot;</span>&gt;内容 <span class="number">2</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 3&quot;</span>&gt;内容 <span class="number">3</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 4&quot;</span>&gt;内容 <span class="number">4</span>&lt;/van-tab&gt;</span><br><span class="line">      &lt;/van-tabs&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      active: <span class="number">0</span>,</span><br><span class="line">      isShow: <span class="literal">false</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>van<span class="token operator">-</span>tabs v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 1"</span><span class="token operator">&gt;</span>内容 <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 2"</span><span class="token operator">&gt;</span>内容 <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 3"</span><span class="token operator">&gt;</span>内容 <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 4"</span><span class="token operator">&gt;</span>内容 <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tabs<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">"App"</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      active<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      isShow<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>问题出现的原因是 Tab 挂载的时候会初始化并获取自身宽度，如果处于隐藏状态下，Tab 是获取不到自身宽度的，因此底部条的位置没法正确计算。</p>
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在展示 Tab 的时候，调用 Tab 实例上的 resize 方法。<br><img src="https://img-blog.csdnimg.cn/20201030133826792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="修改后代码"><a href="#修改后代码" class="headerlink" title="修改后代码"></a>修改后代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;van-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;isShow = !isShow&quot;</span>&gt;点击显示&lt;/van-button&gt;</span><br><span class="line">    &lt;div v-show=<span class="string">&quot;isShow&quot;</span>&gt;</span><br><span class="line">      &lt;van-tabs ref=<span class="string">&quot;tabs&quot;</span> v-model=<span class="string">&quot;active&quot;</span>&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 1&quot;</span>&gt;内容 <span class="number">1</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 2&quot;</span>&gt;内容 <span class="number">2</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 3&quot;</span>&gt;内容 <span class="number">3</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 4&quot;</span>&gt;内容 <span class="number">4</span>&lt;/van-tab&gt;</span><br><span class="line">      &lt;/van-tabs&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      active: <span class="number">0</span>,</span><br><span class="line">      isShow: <span class="literal">false</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="function"><span class="title">isShow</span>(<span class="params">val</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.$nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$refs.tabs.resize();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="修改后代码"><a href="#修改后代码" class="headerlink" title="修改后代码"></a>修改后代码</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>van<span class="token operator">-</span>tabs ref<span class="token operator">=</span><span class="token string">"tabs"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 1"</span><span class="token operator">&gt;</span>内容 <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 2"</span><span class="token operator">&gt;</span>内容 <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 3"</span><span class="token operator">&gt;</span>内容 <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 4"</span><span class="token operator">&gt;</span>内容 <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tabs<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">"App"</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      active<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      isShow<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">isShow</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>tabs<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p>如下图,问题已经解决<br><img src="https://img-blog.csdnimg.cn/20201030133956332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p><a target="_blank" rel="noopener" href="https://youzan.github.io/vant/#/zh-CN/tab">vant文档</a><br><a target="_blank" rel="noopener" href="https://codesandbox.io/s/vant-issue-moban-forked-jpi82?file=/src/App.vue:0-645">代码片段</a></p>
 
@@ -544,7 +610,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/VUE/">
+                                    <span class="chip bg-color">Vue</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -553,9 +623,6 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
 
     
 
@@ -563,132 +630,6 @@
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -748,6 +689,14 @@
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/VUE/">
+                        <span class="chip bg-color">Vue</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -784,6 +733,10 @@
                                     小程序
                                 </a>
                             
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/CANVAS/" class="post-category">
+                                    Canvas
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -791,8 +744,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CANVAS/">
-                        <span class="chip bg-color">canvas</span>
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
                     </a>
                     
                 </div>
@@ -994,6 +947,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/haobaic/haobaic.github.io" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">4.7k</span>&nbsp;字
+            
             
             
             
@@ -1041,11 +997,11 @@
 
 
 
-<!-- 
+
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
- -->
+
 </div>
     </div>
 </footer>

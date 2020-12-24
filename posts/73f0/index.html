@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="青春流年" type="application/atom+xml">
+</head>
 
 
 
@@ -102,17 +105,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
     </a>
     
   </li>
@@ -205,17 +197,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -431,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/ICONFONT/">
-                                <span class="chip bg-color">Iconfont</span>
+                            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                <span class="chip bg-color">小程序</span>
                             </a>
                         
                     </div>
@@ -445,6 +426,10 @@
                         
                             <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
                                 小程序
+                            </a>
+                        
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/ICONFONT/" class="post-category">
+                                Iconfont
                             </a>
                         
                     </div>
@@ -461,25 +446,50 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2020-12-24
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    624
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    2 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
         
 
         
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
+                <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
 <p>在<code>小程序</code>中，有默认的图标<code>icon</code>组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标</p>
 <p>下面，就让我们一起去研究一下怎么引入<code>Iconfont </code>阿里巴巴图标</p>
+</blockquote>
+
 <p>以下↓</p>
 <blockquote>
 <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便捷工具</p>
@@ -494,13 +504,43 @@
 <h3 id="引入到图标小程序中"><a href="#引入到图标小程序中" class="headerlink" title="引入到图标小程序中"></a>引入到图标小程序中</h3><blockquote>
 <p>打开小程序删除多余文件,样式等<br>Unicode获取</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*index.css 复制上面的查看链接代码*/</span></span><br><span class="line"> @font-face &#123;</span><br><span class="line">  font-family: <span class="string">&#x27;iconfont&#x27;</span>;  <span class="comment">/* project id 1858720 */</span></span><br><span class="line">  src: url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.eot&#x27;</span>);</span><br><span class="line">  src: url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix&#x27;</span>) format(<span class="string">&#x27;embedded-opentype&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2&#x27;</span>) format(<span class="string">&#x27;woff2&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.woff&#x27;</span>) format(<span class="string">&#x27;woff&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf&#x27;</span>) format(<span class="string">&#x27;truetype&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont&#x27;</span>) format(<span class="string">&#x27;svg&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*设置一些样式*/</span></span><br><span class="line">.iconfont&#123;</span><br><span class="line">   font-family:<span class="string">&quot;iconfont&quot;</span>; <span class="comment">/*需要与@font-face的font-family一样*/</span></span><br><span class="line">   color: red;</span><br><span class="line">   font-size: 40rpx;</span><br><span class="line">&#125;</span><br><span class="line">.icon-success::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a1&#x27;</span>; <span class="comment">/*Unicode获取方式请看下文*/</span></span><br><span class="line">&#125;</span><br><span class="line">.icon-search::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a2&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">.icon-news::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a3&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/*index.wxml*/</span></span><br><span class="line">&lt;view&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-success&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-search&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-news&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.css 复制上面的查看链接代码*/</span>
+ @font<span class="token operator">-</span>face <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>  <span class="token comment">/* project id 1858720 */</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*设置一些样式*/</span>
+<span class="token punctuation">.</span>iconfont<span class="token punctuation">{</span>
+   font<span class="token operator">-</span>family<span class="token operator">:</span><span class="token string">"iconfont"</span><span class="token punctuation">;</span> <span class="token comment">/*需要与@font-face的font-family一样*/</span>
+   color<span class="token operator">:</span> red<span class="token punctuation">;</span>
+   font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>success<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a1'</span><span class="token punctuation">;</span> <span class="token comment">/*Unicode获取方式请看下文*/</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>search<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a2'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>news<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a3'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.wxml*/</span>
+<span class="token operator">&lt;</span>view<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-search"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-news"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>效果如下:<br><img src="https://img-blog.csdnimg.cn/20200602184741127.png" alt="在这里插入图片描述"><br>如上图，我们可以看到已经成功引入刚刚所收藏的图标</p>
 </blockquote>
 <h3 id="Unicode获取方式"><a href="#Unicode获取方式" class="headerlink" title="Unicode获取方式"></a>Unicode获取方式</h3><blockquote>
-<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>&#39;\e6a1&#39;</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="在这里插入图片描述"></p>
+<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>'\e6a1'</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="在这里插入图片描述"></p>
 </blockquote>
 <h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接:"></a>友情链接:</h3><p><strong><a target="_blank" rel="noopener" href="https://www.iconfont.cn/">iconfont</a><br>   <a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/miniprogram/dev/framework/">小程序文档</a></strong></p>
 
@@ -567,8 +607,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/ICONFONT/">
-                                    <span class="chip bg-color">Iconfont</span>
+                                <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                                    <span class="chip bg-color">小程序</span>
                                 </a>
                             
                         </div>
@@ -579,9 +619,6 @@
 <div id="article-share">
 
     
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
 
     
 
@@ -589,132 +626,6 @@
 
                 </div>
             </div>
-            
-                <style>
-    #reward {
-        margin: 40px 0;
-        text-align: center;
-    }
-
-    #reward .reward-link {
-        font-size: 1.4rem;
-        line-height: 38px;
-    }
-
-    #reward .btn-floating:hover {
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    #rewardModal {
-        width: 320px;
-        height: 350px;
-    }
-
-    #rewardModal .reward-title {
-        margin: 15px auto;
-        padding-bottom: 5px;
-    }
-
-    #rewardModal .modal-content {
-        padding: 10px;
-    }
-
-    #rewardModal .close {
-        position: absolute;
-        right: 15px;
-        top: 15px;
-        color: rgba(0, 0, 0, 0.5);
-        font-size: 1.3rem;
-        line-height: 20px;
-        cursor: pointer;
-    }
-
-    #rewardModal .close:hover {
-        color: #ef5350;
-        transform: scale(1.3);
-        -moz-transform:scale(1.3);
-        -webkit-transform:scale(1.3);
-        -o-transform:scale(1.3);
-    }
-
-    #rewardModal .reward-tabs {
-        margin: 0 auto;
-        width: 210px;
-    }
-
-    .reward-tabs .tabs {
-        height: 38px;
-        margin: 10px auto;
-        padding-left: 0;
-    }
-
-    .reward-content ul {
-        padding-left: 0 !important;
-    }
-
-    .reward-tabs .tabs .tab {
-        height: 38px;
-        line-height: 38px;
-    }
-
-    .reward-tabs .tab a {
-        color: #fff;
-        background-color: #ccc;
-    }
-
-    .reward-tabs .tab a:hover {
-        background-color: #ccc;
-        color: #fff;
-    }
-
-    .reward-tabs .wechat-tab .active {
-        color: #fff !important;
-        background-color: #22AB38 !important;
-    }
-
-    .reward-tabs .alipay-tab .active {
-        color: #fff !important;
-        background-color: #019FE8 !important;
-    }
-
-    .reward-tabs .reward-img {
-        width: 210px;
-        height: 210px;
-    }
-</style>
-
-<div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -777,7 +688,7 @@
                 <div class="card-action article-tags">
                     
                     <a href="/tags/ES6/">
-                        <span class="chip bg-color">es6</span>
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>
@@ -1028,6 +939,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/haobaic/haobaic.github.io" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">4.7k</span>&nbsp;字
+            
             
             
             
@@ -1075,11 +989,11 @@
 
 
 
-<!-- 
+
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
- -->
+
 </div>
     </div>
 </footer>

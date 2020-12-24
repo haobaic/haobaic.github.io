@@ -29,7 +29,10 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="青春流年" type="application/atom+xml">
+</head>
 
 
 
@@ -102,17 +105,6 @@
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
       <span>关于</span>
-    </a>
-    
-  </li>
-  
-  <li class="hide-on-med-and-down nav-item">
-    
-    <a href="/contact" class="waves-effect waves-light">
-      
-      <i class="fas fa-comments" style="zoom: 0.6;"></i>
-      
-      <span>留言板</span>
     </a>
     
   </li>
@@ -205,17 +197,6 @@
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
 			关于
-		</a>
-          
-        </li>
-        
-        <li class="m-nav-item">
-	  
-		<a href="/contact" class="waves-effect waves-light">
-			
-			    <i class="fa-fw fas fa-comments"></i>
-			
-			留言板
 		</a>
           
         </li>
@@ -536,8 +517,14 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    获取route第一种 123456// 监听,当路由发生变化的时候执行watch:&#123;  $route(to,from)&#123;    console.log(to);  &#125;&#125;
-第二种12345678watc
+                                    获取route第一种//监听,当路由发生变化的时候执行
+
+       watch:{
+         $route(to,from){
+           console.log(to);
+         }
+       }
+第二
                                 
                             </div>
                             <div class="publish-info">
@@ -557,6 +544,12 @@
                             </div>
                         </div>
 
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/VUE/"><span class="chip bg-color">Vue</span></a>
+                            
+                        </div>
                         
                     </div>
                 </div>
@@ -592,7 +585,9 @@
                                 
                                     问题描述在使用vant中Tab 标签, 点击显示会出现下划线位置异常,如下图:
 
-代码片段12345678910111213141516171819202122232425&lt;template&gt;  &lt;div id=&quot
+代码片段&lt;template&gt;
+  &lt;div id="app"&gt;
+    &lt;van-button type="primary" @
                                 
                             </div>
                             <div class="publish-info">
@@ -607,11 +602,21 @@
                                     Vue
                                     </a>
                                     
+                                    <a href="/categories/VUE/VANT/" class="post-category">
+                                    Vant
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
                         </div>
 
+                        
+                        <div class="card-action article-tags">
+                            
+                            <a href="/tags/VUE/"><span class="chip bg-color">Vue</span></a>
+                            
+                        </div>
                         
                     </div>
                 </div>
@@ -665,6 +670,10 @@
                                     小程序
                                     </a>
                                     
+                                    <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/CANVAS/" class="post-category">
+                                    Canvas
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
@@ -673,7 +682,7 @@
                         
                         <div class="card-action article-tags">
                             
-                            <a href="/tags/CANVAS/"><span class="chip bg-color">canvas</span></a>
+                            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="chip bg-color">小程序</span></a>
                             
                         </div>
                         
@@ -710,8 +719,8 @@
                             <div class="summary block-with-text">
                                 
                                     如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
-在一个空文件夹里初始化1npm init -y
-安装12npm install --save-dev @babel/core @babel/cli @babel/prese
+在一个空文件夹里初始化npm init -y
+安装npm install --save-dev @babel/core @babel/cli @babel/preset-e
                                 
                             </div>
                             <div class="publish-info">
@@ -734,7 +743,7 @@
                         
                         <div class="card-action article-tags">
                             
-                            <a href="/tags/ES6/"><span class="chip bg-color">es6</span></a>
+                            <a href="/tags/ES6/"><span class="chip bg-color">ES6</span></a>
                             
                         </div>
                         
@@ -787,6 +796,10 @@
                                     小程序
                                     </a>
                                     
+                                    <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/ICONFONT/" class="post-category">
+                                    Iconfont
+                                    </a>
+                                    
                                     
                                 </span>
                             </div>
@@ -795,7 +808,7 @@
                         
                         <div class="card-action article-tags">
                             
-                            <a href="/tags/ICONFONT/"><span class="chip bg-color">Iconfont</span></a>
+                            <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"><span class="chip bg-color">小程序</span></a>
                             
                         </div>
                         
@@ -831,8 +844,9 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    首先安装(自己创建一个vue项目,这儿就直接跳过了)12npm i  amfe-flexible -Snpm i postcss-pxtorem -S
-在项目入口文件main.js 中引入amfe-flexible1import &#x27
+                                    首先安装(自己创建一个vue项目,这儿就直接跳过了)npm i  amfe-flexible -S
+npm i postcss-pxtorem -S
+在项目入口文件main.js 中引入amfe-flexibleimport 'amfe-f
                                 
                             </div>
                             <div class="publish-info">
@@ -939,6 +953,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/haobaic/haobaic.github.io" target="_blank">Matery</a>
             <br>
             
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">4.7k</span>&nbsp;字
+            
             
             
             
@@ -986,11 +1003,11 @@
 
 
 
-<!-- 
+
     <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fas fa-rss"></i>
     </a>
- -->
+
 </div>
     </div>
 </footer>

@@ -4,19 +4,46 @@
     <title>es6语法通过babel转码为es5普通语法的配置</title>
     <url>/posts/92b5/</url>
     <content><![CDATA[<p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
-<h2 id="在一个空文件夹里初始化"><a href="#在一个空文件夹里初始化" class="headerlink" title="在一个空文件夹里初始化"></a>在一个空文件夹里初始化</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm install --save-dev @babel/core @babel/cli @babel/preset-env @babel/plugin-transform-arrow-functions</span><br><span class="line">npm install --save @babel/polyfill</span><br></pre></td></tr></table></figure>
-<h2 id="添加配置：根目录添加个特殊格式文件-babelrc-没有后缀，必须这格式的文件"><a href="#添加配置：根目录添加个特殊格式文件-babelrc-没有后缀，必须这格式的文件" class="headerlink" title="添加配置：根目录添加个特殊格式文件 .babelrc  没有后缀，必须这格式的文件"></a>添加配置：根目录添加个特殊格式文件 .babelrc  没有后缀，必须这格式的文件</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">&quot;presets&quot;</span>:[</span><br><span class="line">        <span class="string">&quot;@babel/preset-env&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="添加脚本：根目录packge-json文件中添加"><a href="#添加脚本：根目录packge-json文件中添加" class="headerlink" title="添加脚本：根目录packge.json文件中添加"></a>添加脚本：根目录packge.json文件中添加</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*src 当前js文件 lib打包js文件*/</span></span><br><span class="line"><span class="string">&quot;build&quot;</span>: <span class="string">&quot;./node_modules/.bin/babel src -d --out-dir lib&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="在一个空文件夹里初始化"><a href="#在一个空文件夹里初始化" class="headerlink" title="在一个空文件夹里初始化"></a>在一个空文件夹里初始化</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm init <span class="token operator">-</span>y<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev @babel<span class="token operator">/</span>core @babel<span class="token operator">/</span>cli @babel<span class="token operator">/</span>preset<span class="token operator">-</span>env @babel<span class="token operator">/</span>plugin<span class="token operator">-</span>transform<span class="token operator">-</span>arrow<span class="token operator">-</span>functions
+npm install <span class="token operator">--</span>save @babel<span class="token operator">/</span>polyfill<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="添加配置：根目录添加个特殊格式文件-babelrc-没有后缀，必须这格式的文件"><a href="#添加配置：根目录添加个特殊格式文件-babelrc-没有后缀，必须这格式的文件" class="headerlink" title="添加配置：根目录添加个特殊格式文件 .babelrc  没有后缀，必须这格式的文件"></a>添加配置：根目录添加个特殊格式文件 .babelrc  没有后缀，必须这格式的文件</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token punctuation">{</span>
+    <span class="token string">"presets"</span><span class="token operator">:</span><span class="token punctuation">[</span>
+        <span class="token string">"@babel/preset-env"</span>
+    <span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="添加脚本：根目录packge-json文件中添加"><a href="#添加脚本：根目录packge-json文件中添加" class="headerlink" title="添加脚本：根目录packge.json文件中添加"></a>添加脚本：根目录packge.json文件中添加</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/*src 当前js文件 lib打包js文件*/</span>
+<span class="token string">"build"</span><span class="token operator">:</span> <span class="token string">"./node_modules/.bin/babel src -d --out-dir lib"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>##运行打包</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm run build</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm run build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>这样就可以转换了!</p>
 ]]></content>
       <categories>
         <category>ES6</category>
       </categories>
       <tags>
-        <tag>es6</tag>
+        <tag>ES6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo部分配置</title>
+    <url>/posts/263a265d/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -24,25 +51,191 @@
     <url>/posts/4b76/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用vant中Tab 标签, 点击显示会出现下划线位置异常,如下图:</p>
 <p><img src="https://img-blog.csdnimg.cn/20201030133509406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;van-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;isShow = !isShow&quot;</span>&gt;点击显示&lt;/van-button&gt;</span><br><span class="line">    &lt;div v-show=<span class="string">&quot;isShow&quot;</span>&gt;</span><br><span class="line">      &lt;van-tabs v-model=<span class="string">&quot;active&quot;</span>&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 1&quot;</span>&gt;内容 <span class="number">1</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 2&quot;</span>&gt;内容 <span class="number">2</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 3&quot;</span>&gt;内容 <span class="number">3</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 4&quot;</span>&gt;内容 <span class="number">4</span>&lt;/van-tab&gt;</span><br><span class="line">      &lt;/van-tabs&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      active: <span class="number">0</span>,</span><br><span class="line">      isShow: <span class="literal">false</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>van<span class="token operator">-</span>tabs v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 1"</span><span class="token operator">&gt;</span>内容 <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 2"</span><span class="token operator">&gt;</span>内容 <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 3"</span><span class="token operator">&gt;</span>内容 <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 4"</span><span class="token operator">&gt;</span>内容 <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tabs<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">"App"</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      active<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      isShow<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>问题出现的原因是 Tab 挂载的时候会初始化并获取自身宽度，如果处于隐藏状态下，Tab 是获取不到自身宽度的，因此底部条的位置没法正确计算。</p>
 <h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在展示 Tab 的时候，调用 Tab 实例上的 resize 方法。<br><img src="https://img-blog.csdnimg.cn/20201030133826792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<h1 id="修改后代码"><a href="#修改后代码" class="headerlink" title="修改后代码"></a>修改后代码</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;van-button type=<span class="string">&quot;primary&quot;</span> @click=<span class="string">&quot;isShow = !isShow&quot;</span>&gt;点击显示&lt;/van-button&gt;</span><br><span class="line">    &lt;div v-show=<span class="string">&quot;isShow&quot;</span>&gt;</span><br><span class="line">      &lt;van-tabs ref=<span class="string">&quot;tabs&quot;</span> v-model=<span class="string">&quot;active&quot;</span>&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 1&quot;</span>&gt;内容 <span class="number">1</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 2&quot;</span>&gt;内容 <span class="number">2</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 3&quot;</span>&gt;内容 <span class="number">3</span>&lt;/van-tab&gt;</span><br><span class="line">        &lt;van-tab title=<span class="string">&quot;标签 4&quot;</span>&gt;内容 <span class="number">4</span>&lt;/van-tab&gt;</span><br><span class="line">      &lt;/van-tabs&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  name: <span class="string">&quot;App&quot;</span>,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      active: <span class="number">0</span>,</span><br><span class="line">      isShow: <span class="literal">false</span>,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="function"><span class="title">isShow</span>(<span class="params">val</span>)</span> &#123;</span><br><span class="line">      <span class="built_in">this</span>.$nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.$refs.tabs.resize();</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="修改后代码"><a href="#修改后代码" class="headerlink" title="修改后代码"></a>修改后代码</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div v<span class="token operator">-</span>show<span class="token operator">=</span><span class="token string">"isShow"</span><span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span>van<span class="token operator">-</span>tabs ref<span class="token operator">=</span><span class="token string">"tabs"</span> v<span class="token operator">-</span>model<span class="token operator">=</span><span class="token string">"active"</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 1"</span><span class="token operator">&gt;</span>内容 <span class="token number">1</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 2"</span><span class="token operator">&gt;</span>内容 <span class="token number">2</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 3"</span><span class="token operator">&gt;</span>内容 <span class="token number">3</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>van<span class="token operator">-</span>tab title<span class="token operator">=</span><span class="token string">"标签 4"</span><span class="token operator">&gt;</span>内容 <span class="token number">4</span><span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tab<span class="token operator">&gt;</span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>tabs<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  name<span class="token operator">:</span> <span class="token string">"App"</span><span class="token punctuation">,</span>
+  <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      active<span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+      isShow<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token function">isShow</span><span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>$refs<span class="token punctuation">.</span>tabs<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p>如下图,问题已经解决<br><img src="https://img-blog.csdnimg.cn/20201030133956332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 <p><a href="https://youzan.github.io/vant/#/zh-CN/tab">vant文档</a><br><a href="https://codesandbox.io/s/vant-issue-moban-forked-jpi82?file=/src/App.vue:0-645">代码片段</a></p>
 ]]></content>
       <categories>
         <category>Vue</category>
+        <category>Vant</category>
       </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vue 路由监听</title>
+    <url>/posts/5c75/</url>
+    <content><![CDATA[<h1 id="获取route"><a href="#获取route" class="headerlink" title="获取route"></a>获取route</h1><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//监听,当路由发生变化的时候执行</span>
+
+       watch<span class="token operator">:</span><span class="token punctuation">{</span>
+         <span class="token function">$route</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span><span class="token keyword">from</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>to<span class="token punctuation">)</span><span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token string">'$route'</span><span class="token operator">:</span><span class="token string">'routeChange'</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+methods<span class="token operator">:</span> <span class="token punctuation">{</span>
+  <span class="token function">routeChange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
+      $route<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
+        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token comment">// 深度观察监听</span>
+            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 配置立即执行属性</span>
+        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="获取route-path"><a href="#获取route-path" class="headerlink" title="获取route.path"></a>获取route.path</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
+      <span class="token string">"$route.path"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
+        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token comment">// 深度观察监听</span>
+            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 配置立即执行属性</span>
+        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="获取route-name"><a href="#获取route-name" class="headerlink" title="获取route.name"></a>获取route.name</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
+      <span class="token string">"$route.name"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">//</span>
+      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
+        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+         <span class="token comment">// 深度观察监听</span>
+            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+        <span class="token comment">// 配置立即执行属性</span>
+        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+]]></content>
+      <categories>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+      </tags>
   </entry>
   <entry>
     <title>vue 配置移动单位转换插件</title>
     <url>/posts/60b0/</url>
-    <content><![CDATA[<h2 id="首先安装-自己创建一个vue项目-这儿就直接跳过了"><a href="#首先安装-自己创建一个vue项目-这儿就直接跳过了" class="headerlink" title="首先安装(自己创建一个vue项目,这儿就直接跳过了)"></a>首先安装(<code>自己创建一个vue项目,这儿就直接跳过了</code>)</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">npm i  amfe-flexible -S</span><br><span class="line">npm i postcss-pxtorem -S</span><br></pre></td></tr></table></figure>
-<h2 id="在项目入口文件main-js-中引入amfe-flexible"><a href="#在项目入口文件main-js-中引入amfe-flexible" class="headerlink" title="在项目入口文件main.js 中引入amfe-flexible"></a>在项目入口文件main.js 中引入<code>amfe-flexible</code></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">&#x27;amfe-flexible&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<h2 id="在根目录的index-html-的头部加入手机端适配的meta代码-有的话就不用加了"><a href="#在根目录的index-html-的头部加入手机端适配的meta代码-有的话就不用加了" class="headerlink" title="在根目录的index.html 的头部加入手机端适配的meta代码(有的话就不用加了)"></a>在根目录的index.html 的头部加入手机端适配的meta代码(<code>有的话就不用加了</code>)</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1, user-scalable=no&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
-<h2 id="在vue-config-js-中的-css-loaderOptions-postcss-配置-postcss-loader"><a href="#在vue-config-js-中的-css-loaderOptions-postcss-配置-postcss-loader" class="headerlink" title="在vue.config.js 中的 css.loaderOptions.postcss 配置 postcss-loader"></a>在vue.config.js 中的 css.loaderOptions.postcss 配置 <code>postcss-loader</code></h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//引入:</span></span><br><span class="line"><span class="keyword">const</span> autoprefixer = <span class="built_in">require</span>(<span class="string">&#x27;autoprefixer&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> pxtorem = <span class="built_in">require</span>(<span class="string">&#x27;postcss-pxtorem&#x27;</span>);</span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">	css:&#123;</span><br><span class="line">		<span class="comment">// 是否使用css分离插件 ExtractTextPlugin</span></span><br><span class="line">		extract: <span class="literal">true</span>,</span><br><span class="line">		<span class="comment">// 开启 CSS source maps?</span></span><br><span class="line">		sourceMap: <span class="literal">false</span>,</span><br><span class="line">		<span class="comment">// 启用 CSS modules for all css / pre-processor files.</span></span><br><span class="line">		requireModuleExtension: <span class="literal">true</span>,</span><br><span class="line">		<span class="comment">// css预设器配置项</span></span><br><span class="line">		loaderOptions: &#123;</span><br><span class="line">			postcss: &#123;</span><br><span class="line">				plugins: [</span><br><span class="line">					autoprefixer(&#123;</span><br><span class="line">						overrideBrowserslist: [</span><br><span class="line">							<span class="string">&quot;Android 4.1&quot;</span>,</span><br><span class="line">							<span class="string">&quot;iOS 7.1&quot;</span>,</span><br><span class="line">							<span class="string">&quot;Chrome &gt; 31&quot;</span>,</span><br><span class="line">							<span class="string">&quot;ff &gt; 31&quot;</span>,</span><br><span class="line">							<span class="string">&quot;ie &gt;= 8&quot;</span></span><br><span class="line">						]</span><br><span class="line">					&#125;),</span><br><span class="line">					pxtorem(&#123;</span><br><span class="line">						rootValue: <span class="number">37.5</span>,<span class="comment">// 配置视窗口尺寸</span></span><br><span class="line">						propList: [<span class="string">&#x27;*&#x27;</span>]</span><br><span class="line">					&#125;)</span><br><span class="line">				]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="在vue文件中使用"><a href="#在vue文件中使用" class="headerlink" title="在vue文件中使用:"></a>在vue文件中使用:</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//app.vue</span></span><br><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;div id=<span class="string">&quot;app&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">	#app&#123;</span><br><span class="line">		width: 750px;</span><br><span class="line">		height: 200px;</span><br><span class="line">		background-color: red;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="首先安装-自己创建一个vue项目-这儿就直接跳过了"><a href="#首先安装-自己创建一个vue项目-这儿就直接跳过了" class="headerlink" title="首先安装(自己创建一个vue项目,这儿就直接跳过了)"></a>首先安装(<code>自己创建一个vue项目,这儿就直接跳过了</code>)</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">npm i  amfe<span class="token operator">-</span>flexible <span class="token operator">-</span><span class="token constant">S</span>
+npm i postcss<span class="token operator">-</span>pxtorem <span class="token operator">-</span><span class="token constant">S</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="在项目入口文件main-js-中引入amfe-flexible"><a href="#在项目入口文件main-js-中引入amfe-flexible" class="headerlink" title="在项目入口文件main.js 中引入amfe-flexible"></a>在项目入口文件main.js 中引入<code>amfe-flexible</code></h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> <span class="token string">'amfe-flexible'</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="在根目录的index-html-的头部加入手机端适配的meta代码-有的话就不用加了"><a href="#在根目录的index-html-的头部加入手机端适配的meta代码-有的话就不用加了" class="headerlink" title="在根目录的index.html 的头部加入手机端适配的meta代码(有的话就不用加了)"></a>在根目录的index.html 的头部加入手机端适配的meta代码(<code>有的话就不用加了</code>)</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string">"viewport"</span> content<span class="token operator">=</span><span class="token string">"width=device-width, initial-scale=1, user-scalable=no"</span><span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="在vue-config-js-中的-css-loaderOptions-postcss-配置-postcss-loader"><a href="#在vue-config-js-中的-css-loaderOptions-postcss-配置-postcss-loader" class="headerlink" title="在vue.config.js 中的 css.loaderOptions.postcss 配置 postcss-loader"></a>在vue.config.js 中的 css.loaderOptions.postcss 配置 <code>postcss-loader</code></h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//引入:</span>
+<span class="token keyword">const</span> autoprefixer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'autoprefixer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> pxtorem <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'postcss-pxtorem'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+	css<span class="token operator">:</span><span class="token punctuation">{</span>
+		<span class="token comment">// 是否使用css分离插件 ExtractTextPlugin</span>
+		extract<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token comment">// 开启 CSS source maps?</span>
+		sourceMap<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+		<span class="token comment">// 启用 CSS modules for all css / pre-processor files.</span>
+		requireModuleExtension<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+		<span class="token comment">// css预设器配置项</span>
+		loaderOptions<span class="token operator">:</span> <span class="token punctuation">{</span>
+			postcss<span class="token operator">:</span> <span class="token punctuation">{</span>
+				plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+					<span class="token function">autoprefixer</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+						overrideBrowserslist<span class="token operator">:</span> <span class="token punctuation">[</span>
+							<span class="token string">"Android 4.1"</span><span class="token punctuation">,</span>
+							<span class="token string">"iOS 7.1"</span><span class="token punctuation">,</span>
+							<span class="token string">"Chrome &gt; 31"</span><span class="token punctuation">,</span>
+							<span class="token string">"ff &gt; 31"</span><span class="token punctuation">,</span>
+							<span class="token string">"ie &gt;= 8"</span>
+						<span class="token punctuation">]</span>
+					<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+					<span class="token function">pxtorem</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+						rootValue<span class="token operator">:</span> <span class="token number">37.5</span><span class="token punctuation">,</span><span class="token comment">// 配置视窗口尺寸</span>
+						propList<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'*'</span><span class="token punctuation">]</span>
+					<span class="token punctuation">}</span><span class="token punctuation">)</span>
+				<span class="token punctuation">]</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="在vue文件中使用"><a href="#在vue文件中使用" class="headerlink" title="在vue文件中使用:"></a>在vue文件中使用:</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//app.vue</span>
+<span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>style<span class="token operator">&gt;</span>
+	#app<span class="token punctuation">{</span>
+		width<span class="token operator">:</span> <span class="token number">750</span>px<span class="token punctuation">;</span>
+		height<span class="token operator">:</span> <span class="token number">200</span>px<span class="token punctuation">;</span>
+		background<span class="token operator">-</span>color<span class="token operator">:</span> red<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>style<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h2><p><img src="https://img-blog.csdnimg.cn/20200602160407446.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述">如图:红色区域已经转换成功</p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接:"></a>参考链接:</h2><p><strong><a href="https://www.npmjs.com/package/amfe-flexible">amfe-flexible</a><br><a href="https://www.npmjs.com/package/postcss-pxtorem">postcss-pxtorem</a></strong></p>
 ]]></content>
@@ -54,24 +247,13 @@
       </tags>
   </entry>
   <entry>
-    <title>vue 路由监听</title>
-    <url>/posts/5c75/</url>
-    <content><![CDATA[<h1 id="获取route"><a href="#获取route" class="headerlink" title="获取route"></a>获取route</h1><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4> <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 监听,当路由发生变化的时候执行</span></span><br><span class="line">watch:&#123;</span><br><span class="line">  $route(to,<span class="keyword">from</span>)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(to);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  <span class="string">&#x27;$route&#x27;</span>:<span class="string">&#x27;routeChange&#x27;</span></span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  <span class="function"><span class="title">routeChange</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="built_in">this</span>.$route);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">      <span class="comment">// 在值发生变化之后，重新加载数据</span></span><br><span class="line">      $route: &#123;</span><br><span class="line">      <span class="comment">// 通过handler来监听属性变化, 初次调用 newValue为&quot;&quot;空字符串， oldValue为 undefined</span></span><br><span class="line">        <span class="function"><span class="title">handler</span>(<span class="params">newValue, oldValue</span>)</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(newValue)</span><br><span class="line">        &#125;,</span><br><span class="line">         <span class="comment">// 深度观察监听</span></span><br><span class="line">            deep: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 配置立即执行属性</span></span><br><span class="line">        immediate: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h4 id="获取route-path"><a href="#获取route-path" class="headerlink" title="获取route.path"></a>获取route.path</h4><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">      <span class="comment">// 在值发生变化之后，重新加载数据</span></span><br><span class="line">      <span class="string">&quot;$route.path&quot;</span>: &#123;</span><br><span class="line">      <span class="comment">// 通过handler来监听属性变化, 初次调用 newValue为&quot;&quot;空字符串， oldValue为 undefined</span></span><br><span class="line">        <span class="function"><span class="title">handler</span>(<span class="params">newValue, oldValue</span>)</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(newValue)</span><br><span class="line">        &#125;,</span><br><span class="line">         <span class="comment">// 深度观察监听</span></span><br><span class="line">            deep: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 配置立即执行属性</span></span><br><span class="line">        immediate: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h1 id="获取route-name"><a href="#获取route-name" class="headerlink" title="获取route.name"></a>获取route.name</h1><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">      <span class="comment">// 在值发生变化之后，重新加载数据</span></span><br><span class="line">      <span class="string">&quot;$route.name&quot;</span>: &#123; <span class="comment">//</span></span><br><span class="line">      <span class="comment">// 通过handler来监听属性变化, 初次调用 newValue为&quot;&quot;空字符串， oldValue为 undefined</span></span><br><span class="line">        <span class="function"><span class="title">handler</span>(<span class="params">newValue, oldValue</span>)</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.log(newValue)</span><br><span class="line">        &#125;,</span><br><span class="line">         <span class="comment">// 深度观察监听</span></span><br><span class="line">            deep: <span class="literal">true</span>,</span><br><span class="line">        <span class="comment">// 配置立即执行属性</span></span><br><span class="line">        immediate: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Vue</category>
-      </categories>
-  </entry>
-  <entry>
     <title>在微信小程序中引入 Iconfont 阿里巴巴图标</title>
     <url>/posts/73f0/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
 <p>在<code>小程序</code>中，有默认的图标<code>icon</code>组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标</p>
 <p>下面，就让我们一起去研究一下怎么引入<code>Iconfont </code>阿里巴巴图标</p>
+</blockquote>
+
 <p>以下↓</p>
 <blockquote>
 <p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便捷工具</p>
@@ -86,21 +268,52 @@
 <h3 id="引入到图标小程序中"><a href="#引入到图标小程序中" class="headerlink" title="引入到图标小程序中"></a>引入到图标小程序中</h3><blockquote>
 <p>打开小程序删除多余文件,样式等<br>Unicode获取</p>
 </blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="comment">/*index.css 复制上面的查看链接代码*/</span></span><br><span class="line"> @font-face &#123;</span><br><span class="line">  font-family: <span class="string">&#x27;iconfont&#x27;</span>;  <span class="comment">/* project id 1858720 */</span></span><br><span class="line">  src: url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.eot&#x27;</span>);</span><br><span class="line">  src: url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix&#x27;</span>) format(<span class="string">&#x27;embedded-opentype&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2&#x27;</span>) format(<span class="string">&#x27;woff2&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.woff&#x27;</span>) format(<span class="string">&#x27;woff&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf&#x27;</span>) format(<span class="string">&#x27;truetype&#x27;</span>),</span><br><span class="line">  url(<span class="string">&#x27;//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont&#x27;</span>) format(<span class="string">&#x27;svg&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*设置一些样式*/</span></span><br><span class="line">.iconfont&#123;</span><br><span class="line">   font-family:<span class="string">&quot;iconfont&quot;</span>; <span class="comment">/*需要与@font-face的font-family一样*/</span></span><br><span class="line">   color: red;</span><br><span class="line">   font-size: 40rpx;</span><br><span class="line">&#125;</span><br><span class="line">.icon-success::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a1&#x27;</span>; <span class="comment">/*Unicode获取方式请看下文*/</span></span><br><span class="line">&#125;</span><br><span class="line">.icon-search::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a2&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">.icon-news::before&#123;</span><br><span class="line">  content: <span class="string">&#x27;\e6a3&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"> <span class="comment">/*index.wxml*/</span></span><br><span class="line">&lt;view&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-success&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-search&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">	&lt;icon <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;iconfont icon-news&quot;</span>&gt;&lt;/icon&gt;</span><br><span class="line">&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.css 复制上面的查看链接代码*/</span>
+ @font<span class="token operator">-</span>face <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>  <span class="token comment">/* project id 1858720 */</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*设置一些样式*/</span>
+<span class="token punctuation">.</span>iconfont<span class="token punctuation">{</span>
+   font<span class="token operator">-</span>family<span class="token operator">:</span><span class="token string">"iconfont"</span><span class="token punctuation">;</span> <span class="token comment">/*需要与@font-face的font-family一样*/</span>
+   color<span class="token operator">:</span> red<span class="token punctuation">;</span>
+   font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>success<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a1'</span><span class="token punctuation">;</span> <span class="token comment">/*Unicode获取方式请看下文*/</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>search<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a2'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>news<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a3'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.wxml*/</span>
+<span class="token operator">&lt;</span>view<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-search"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-news"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>效果如下:<br><img src="https://img-blog.csdnimg.cn/20200602184741127.png" alt="在这里插入图片描述"><br>如上图，我们可以看到已经成功引入刚刚所收藏的图标</p>
 </blockquote>
 <h3 id="Unicode获取方式"><a href="#Unicode获取方式" class="headerlink" title="Unicode获取方式"></a>Unicode获取方式</h3><blockquote>
-<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>&#39;\e6a1&#39;</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="在这里插入图片描述"></p>
+<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>'\e6a1'</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="在这里插入图片描述"></p>
 </blockquote>
 <h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接:"></a>友情链接:</h3><p><strong><a href="https://www.iconfont.cn/">iconfont</a><br>   <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">小程序文档</a></strong></p>
 ]]></content>
       <categories>
         <category>小程序</category>
+        <category>Iconfont</category>
       </categories>
       <tags>
-        <tag>Iconfont</tag>
+        <tag>小程序</tag>
       </tags>
   </entry>
   <entry>
@@ -108,21 +321,21 @@
     <url>/posts/f86d3988/</url>
     <content><![CDATA[<h3>目录</h3>
 
-<p>&emsp;<a href="#w1">1. 简单描述下微信小程序的相关文件类型</a></p>
-<p>&emsp;<a href="#w2">2. 简述微信小程序原理</a></p>
-<p>&emsp;<a href="#w3">3. 小程序的双向绑定和vue哪里不一样</a></p>
-<p>&emsp;<a href="#w4">4. 小程序的wxss和css有哪些不一样的地方</a></p>
-<p>&emsp;<a href="#w5">5. 小程序页面间有哪些传递数据的方法</a></p>
-<p>&emsp;<a href="#w6">6. 小程序的生命周期函数</a></p>
-<p>&emsp;<a href="#w7">7. 怎么封装微信小程序的数据请求</a></p>
-<p>&emsp;<a href="#w8">8. 哪些方法可以用来提高微信小程序的应用速度</a></p>
-<p>&emsp;<a href="#w9">9. 微信小程序的优劣势</a></p>
-<p>&emsp;<a href="#w10">10. 怎么解决小程序的异步请求问题</a></p>
-<p>&emsp;<a href="#k11">11. 小程序关联微信公众号如何确定用户的唯一性</a></p>
-<p>&emsp;<a href="#k12">12. 如何实现下拉刷新</a></p>
-<p>&emsp;<a href="#k13">13. bindtap和catchtap的区别是什么</a></p>
-<p>&emsp;<a href="#k14">14. 简述下wx.navigateTo(), wx.redirectTo(), wx.switchTab(), wx.navigateBack(), wx.reLaunch()的区别</a></p>
-<h5 id='w1'>1. 简单描述下微信小程序的相关文件类型</h5>
+<p> <a href="#w1">1. 简单描述下微信小程序的相关文件类型</a></p>
+<p> <a href="#w2">2. 简述微信小程序原理</a></p>
+<p> <a href="#w3">3. 小程序的双向绑定和vue哪里不一样</a></p>
+<p> <a href="#w4">4. 小程序的wxss和css有哪些不一样的地方</a></p>
+<p> <a href="#w5">5. 小程序页面间有哪些传递数据的方法</a></p>
+<p> <a href="#w6">6. 小程序的生命周期函数</a></p>
+<p> <a href="#w7">7. 怎么封装微信小程序的数据请求</a></p>
+<p> <a href="#w8">8. 哪些方法可以用来提高微信小程序的应用速度</a></p>
+<p> <a href="#w9">9. 微信小程序的优劣势</a></p>
+<p> <a href="#w10">10. 怎么解决小程序的异步请求问题</a></p>
+<p> <a href="#k11">11. 小程序关联微信公众号如何确定用户的唯一性</a></p>
+<p> <a href="#k12">12. 如何实现下拉刷新</a></p>
+<p> <a href="#k13">13. bindtap和catchtap的区别是什么</a></p>
+<p> <a href="#k14">14. 简述下wx.navigateTo(), wx.redirectTo(), wx.switchTab(), wx.navigateBack(), wx.reLaunch()的区别</a></p>
+<h5 id="w1">1. 简单描述下微信小程序的相关文件类型</h5>
 
 <blockquote>
 <p>微信小程序项目结构主要有四个文件类型</p>
@@ -141,7 +354,7 @@
 <li><code>app.js</code> 必须要有这个文件，没有也是会报错！但是这个文件创建一下就行 什么都不需要写以后我们可以在这个文件中监听并处理小程序的生命周期函数、声明全局变量</li>
 <li><code>app.wxss</code> 可选</li>
 </ul>
-<h5 id='w2'>2. 简述微信小程序原理</h5>
+<h5 id="w2">2. 简述微信小程序原理</h5>
 
 <blockquote>
 <p>微信小程序采用 <code>JavaScript</code>、<code>WXML</code>、<code>WXSS</code> 三种技术进行开发,本质就是一个单页面应用，所有的页面渲染和事件处理，都在一个页面内进行，但又可以通过微信客户端调用原生的各种接口</p>
@@ -152,11 +365,13 @@
 <blockquote>
 <p>小程序分为两个部分 <code>webview</code> 和 <code>appService</code> 。其中 <code>webview</code> 主要用来展现 <code>UI </code>，<code>appService</code> 有来处理业务逻辑、数据及接口调用。它们在两个进程中运行，通过系统层 <code>JSBridge</code> 实现通信，实现 <code>UI</code> 的渲染、事件的处理</p>
 </blockquote>
-<h5 id='w3'>3. 小程序的双向绑定和vue哪里不一样</h5>
+<h5 id="w3">3. 小程序的双向绑定和vue哪里不一样</h5>
 
 <p>小程序直接 <code>this.data</code> 的属性是不可以同步到视图的，必须调用：</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="built_in">this</span>.setData(&#123;</span><br><span class="line">    <span class="comment">// 这里设置</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h5 id='w4'>4. 小程序的wxss和css有哪些不一样的地方</h5>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token comment">// 这里设置</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h5 id="w4">4. 小程序的wxss和css有哪些不一样的地方</h5>
 
 <blockquote>
 <p><code>WXSS</code> 和 <code>CSS</code> 类似，不过在 <code>CSS</code> 的基础上做了一些补充和修改</p>
@@ -168,25 +383,59 @@
 <ul>
 <li>使用 <code>@import</code> 标识符来导入外联样式。<code>@import</code> 后跟需要导入的外联样式表的相对路径，用;表示语句结束</li>
 </ul>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/** index.wxss **/</span></span><br><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;./base.wxss&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h5 id='w5'>5. 小程序页面间有哪些传递数据的方法</h5>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/** index.wxss **/</span>
+<span class="token atrule"><span class="token rule">@import</span> <span class="token string">'./base.wxss'</span><span class="token punctuation">;</span></span>
+
+<span class="token selector">.container</span><span class="token punctuation">{</span>
+    <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="w5">5. 小程序页面间有哪些传递数据的方法</h5>
 
 <ul>
 <li>使用全局变量实现数据传递<br>在 <code>app.js</code> 文件中定义全局变量 <code>globalData</code>， 将需要存储的信息存放在里面</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// app.js</span></span><br><span class="line"></span><br><span class="line">App(&#123;</span><br><span class="line">     <span class="comment">// 全局变量</span></span><br><span class="line">  globalData: &#123;</span><br><span class="line">    userInfo: <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// app.js</span>
+
+<span class="token function">App</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+     <span class="token comment">// 全局变量</span>
+  globalData<span class="token operator">:</span> <span class="token punctuation">{</span>
+    userInfo<span class="token operator">:</span> <span class="token keyword">null</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>使用的时候，直接使用 <code>getApp()</code> 拿到存储的信息</p>
 <ul>
 <li>使用 <code>wx.navigateTo</code> 与 <code>wx.redirectTo</code> 的时候，可以将部分数据放在 <code>url</code> 里面，并在新页面 <code>onLoad</code> 的时候初始化</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//pageA.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Navigate</span></span><br><span class="line">wx.navigateTo(&#123;</span><br><span class="line">  url: <span class="string">&#x27;../pageD/pageD?name=raymond&amp;gender=male&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Redirect</span></span><br><span class="line">wx.redirectTo(&#123;</span><br><span class="line">  url: <span class="string">&#x27;../pageD/pageD?name=raymond&amp;gender=male&#x27;</span>,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// pageB.js</span></span><br><span class="line">...</span><br><span class="line">Page(&#123;</span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span>(<span class="params">option</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(option.name + <span class="string">&#x27;is&#x27;</span> + option.gender)</span><br><span class="line">    <span class="built_in">this</span>.setData(&#123;</span><br><span class="line">      option: option</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">//pageA.js</span>
+
+<span class="token comment">// Navigate</span>
+wx<span class="token punctuation">.</span><span class="token function">navigateTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">'../pageD/pageD?name=raymond&amp;gender=male'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// Redirect</span>
+wx<span class="token punctuation">.</span><span class="token function">redirectTo</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  url<span class="token operator">:</span> <span class="token string">'../pageD/pageD?name=raymond&amp;gender=male'</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+
+<span class="token comment">// pageB.js</span>
+<span class="token operator">...</span>
+<span class="token function">Page</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  <span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">option</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>option<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">'is'</span> <span class="token operator">+</span> option<span class="token punctuation">.</span>gender<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setData</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      option<span class="token operator">:</span> option
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>需要注意的问题：</p>
 <p><code>wx.navigateTo</code> 和 <code>wx.redirectTo</code> 不允许跳转到 <code>tab</code> 所包含的页面</p>
 <p><code>onLoad</code> 只执行一次</p>
 <ul>
 <li>使用本地缓存 <code>Storage</code> 相关</li>
 </ul>
-<h5 id='w6'>6. 小程序的生命周期函数</h5>
+<h5 id="w6">6. 小程序的生命周期函数</h5>
 
 <ul>
 <li><code>onLoad</code> 页面加载时触发。一个页面只会调用一次，可以在 <code>onLoad</code> 的参数中获取打开当前页面路径中的参数</li>
@@ -196,16 +445,16 @@
 <li><code>onUnload()</code> 页面卸载时触发。如 <code>redirectTo</code> 或 <code>navigateBack</code> 到其他页面时</li>
 </ul>
 <p>详见 <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/app-service/page.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">生命周期回调函数</a></p>
-<h5 id='w7'>7. 怎么封装微信小程序的数据请求</h5>
+<h5 id="w7">7. 怎么封装微信小程序的数据请求</h5>
 
 <p>参考 <a href="https://segmentfault.com/a/1190000014789969">这里</a></p>
-<h5 id='w8'>8. 哪些方法可以用来提高微信小程序的应用速度</h5>
+<h5 id="w8">8. 哪些方法可以用来提高微信小程序的应用速度</h5>
 
 <p>1、提高页面加载速度</p>
 <p>2、用户行为预测</p>
 <p>3、减少默认 <code>data</code> 的大小</p>
 <p>4、组件化方案</p>
-<h5 id='w9'>9. 微信小程序的优劣势</h5>
+<h5 id="w9">9. 微信小程序的优劣势</h5>
 
 <blockquote>
 <p>优势</p>
@@ -223,7 +472,7 @@
 <li>入口相对传统 <code>App</code> 要深很多</li>
 <li>限制较多,页面大小不能超过2M。不能打开超过10个层级的页面</li>
 </ul>
-<h5 id='w10'>10. 怎么解决小程序的异步请求问题</h5>
+<h5 id="w10">10. 怎么解决小程序的异步请求问题</h5>
 
 <blockquote>
 <p>小程序支持大部分 <code>ES6</code> 语法</p>
@@ -232,12 +481,12 @@
 <li>在返回成功的回调里面处理逻辑</li>
 <li><code>Promise</code> 异步</li>
 </ul>
-<h5 id='w11'>11. 小程序关联微信公众号如何确定用户的唯一性</h5>
+<h5 id="w11">11. 小程序关联微信公众号如何确定用户的唯一性</h5>
 
 <blockquote>
 <p>如果开发者拥有多个移动应用、网站应用、和公众帐号（包括小程序），可通过 <code>unionid </code>来区分用户的唯一性，因为只要是同一个微信开放平台帐号下的移动应用、网站应用和公众帐号（包括小程序），用户的 <code>unionid</code> 是唯一的。换句话说，同一用户，对同一个微信开放平台下的不同应用，<code>unionid</code> 是相同的</p>
 </blockquote>
-<h5 id='w12'>12. 如何实现下拉刷新</h5>
+<h5 id="w12">12. 如何实现下拉刷新</h5>
 
 <ul>
 <li>首先在全局 <code>config</code> 中的 <code>window</code> 配置 <code>enablePullDownRefresh</code> </li>
@@ -245,11 +494,11 @@
 <li>请求返回后，调用 <code>wx.stopPullDownRefresh</code> 停止下拉刷新</li>
 </ul>
 <p>参考 <a href="https://juejin.im/post/5a781c756fb9a063606eb742">这里</a></p>
-<h5 id='w13'>13. bindtap和catchtap的区别是什么</h5>
+<h5 id="w13">13. bindtap和catchtap的区别是什么</h5>
 
 <p>相同点：首先他们都是作为点击事件函数，就是点击时触发。在这个作用上他们是一样的，可以不做区分</p>
 <p>不同点：他们的不同点主要是 <code>bindtap</code> 是不会阻止冒泡事件的，<code>catchtap</code> 是阻值冒泡的</p>
-<h5 id='w14'>14. 简述下 `wx.navigateTo()`, `wx.redirectTo()`, `wx.switchTab()`, `wx.navigateBack()`, `wx.reLaunch()`的区别</h5>
+<h5 id="w14">14. 简述下 `wx.navigateTo()`, `wx.redirectTo()`, `wx.switchTab()`, `wx.navigateBack()`, `wx.reLaunch()`的区别</h5>
 
 <ul>
 <li><code>wx.navigateTo()</code>：保留当前页面，跳转到应用内的某个页面。但是不能跳到 <code>tabbar</code> 页面</li>
@@ -261,29 +510,10 @@
 ]]></content>
       <categories>
         <category>面试</category>
+        <category>小程序</category>
       </categories>
       <tags>
         <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo部分配置</title>
-    <url>/posts/263a265d/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
   <entry>
@@ -305,16 +535,203 @@
 </blockquote>
 
 
-<h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;canvas style=<span class="string">&quot;width:750px;height:777px;position:absolute;top:0px;left:-2000px;&quot;</span> id=<span class="string">&quot;canvas&quot;</span> type=<span class="string">&quot;2d&quot;</span>&gt;&lt;/canvas&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="wxml"><a href="#wxml" class="headerlink" title="wxml"></a>wxml</h2><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>canvas style<span class="token operator">=</span><span class="token string">"width:750px;height:777px;position:absolute;top:0px;left:-2000px;"</span> id<span class="token operator">=</span><span class="token string">"canvas"</span> type<span class="token operator">=</span><span class="token string">"2d"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>canvas<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><h3 id="drawCanvas-js"><a href="#drawCanvas-js" class="headerlink" title="drawCanvas.js"></a>drawCanvas.js</h3><p> [单独创建drawCanvas.js存放一些公共函数,里面封装了图片渲染文字换行等一些方法(由于画布无法直接使用网络图片，所以需要 wx.downloadFile或者wx.getImageInfo把它下载回来才能使用,本文使用wx.downloadFile)]</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="comment">// 下载图片函数</span></span><br><span class="line">  <span class="function"><span class="title">downloadImg</span>(<span class="params">img</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//将网络图片转成本地路径     </span></span><br><span class="line">      <span class="comment">// wx.getImageInfo(&#123;</span></span><br><span class="line">      <span class="comment">//   src: img,</span></span><br><span class="line">      <span class="comment">//   success: function (res) &#123;</span></span><br><span class="line">      <span class="comment">//     resolve(res.path)</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">//   &#125;</span></span><br><span class="line">      <span class="comment">// &#125;)</span></span><br><span class="line">      <span class="comment">//方法二</span></span><br><span class="line">      wx.downloadFile(&#123;</span><br><span class="line">        url: img,</span><br><span class="line">        success: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">let</span> cover = res.tempFilePath;</span><br><span class="line">          resolve(cover)</span><br><span class="line">        &#125;,</span><br><span class="line">        fail: <span class="function">(<span class="params">err</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">          reject(err)</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//图片渲染</span></span><br><span class="line">  <span class="function"><span class="title">drawImage</span>(<span class="params">canvas, ctx, imgUrl, x, y, w, h</span>)</span> &#123;</span><br><span class="line">    ctx.save();</span><br><span class="line">    <span class="keyword">const</span> img = canvas.createImage();</span><br><span class="line">    img.src = imgUrl</span><br><span class="line">    img.onload = <span class="function">() =&gt;</span> ctx.drawImage(img, x, y, w, h);</span><br><span class="line">    ctx.closePath();</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//文字换行</span></span><br><span class="line">  drawTxt: <span class="function"><span class="keyword">function</span> (<span class="params">ctx, _str, _x, _y, _total, _lineh, _linenum</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (_str == <span class="string">&quot;&quot;</span> || _str == <span class="literal">undefined</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> total = _total ? _total : <span class="number">15</span>; <span class="comment">//每行字数（数字算半个）</span></span><br><span class="line">    <span class="keyword">var</span> lineH = _lineh ? _lineh : <span class="number">20</span>; <span class="comment">//行间距</span></span><br><span class="line">    <span class="keyword">var</span> lineNum = _linenum ? _linenum : <span class="number">4</span>; <span class="comment">//最大显示行数</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    拆解字符串到数组，按行，每行15个（判断数字占半个，其他占1个）</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">var</span> lineArray = [];</span><br><span class="line">    <span class="keyword">var</span> len = <span class="number">0</span>; <span class="comment">//数字算半个，中文算一个</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; _str.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> line = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">Math</span>.ceil(len) % total == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (lineArray[lineArray.length - <span class="number">1</span>] != <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">          lineArray.push(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">var</span> index = <span class="built_in">Math</span>.floor(len / total); <span class="comment">//</span></span><br><span class="line">      lineArray[index] = lineArray[index] + _str[i];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(_str[i])) &#123;</span><br><span class="line">        <span class="comment">//是数字</span></span><br><span class="line">        len = len + <span class="number">0.5</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        len = len + <span class="number">1</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; lineArray.length; i++) &#123;</span><br><span class="line">      <span class="keyword">var</span> t_str = lineArray[i];</span><br><span class="line">      <span class="keyword">if</span> (lineArray.length &gt; lineNum &amp;&amp; i == (lineNum - <span class="number">1</span>)) &#123;</span><br><span class="line">        <span class="comment">//如果总行数大于设定的行数，则到最大设定行时，加省略号，退出</span></span><br><span class="line">        t_str = t_str + <span class="string">&#x27;...&#x27;</span></span><br><span class="line">        ctx.fillText(t_str, _x, _y + lineH * i);</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        ctx.fillText(t_str, _x, _y + lineH * i);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">//裁切圆角  </span></span><br><span class="line">  drawRoundRect: <span class="function"><span class="keyword">function</span> (<span class="params">cxt, x, y, width, height, radius</span>) </span>&#123;</span><br><span class="line">    cxt.save()</span><br><span class="line">    cxt.beginPath();</span><br><span class="line">    cxt.arc(x + radius, y + radius, radius, <span class="built_in">Math</span>.PI, <span class="built_in">Math</span>.PI * <span class="number">3</span> / <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(width - radius + x, y);</span><br><span class="line">    cxt.arc(width - radius + x, radius + y, radius, <span class="built_in">Math</span>.PI * <span class="number">3</span> / <span class="number">2</span>, <span class="built_in">Math</span>.PI * <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(width + x, height + y - radius);</span><br><span class="line">    cxt.arc(width - radius + x, height - radius + y, radius, <span class="number">0</span>, <span class="built_in">Math</span>.PI * <span class="number">1</span> / <span class="number">2</span>);</span><br><span class="line">    cxt.lineTo(radius + x, height + y);</span><br><span class="line">    cxt.arc(radius + x, height - radius + y, radius, <span class="built_in">Math</span>.PI * <span class="number">1</span> / <span class="number">2</span>, <span class="built_in">Math</span>.PI);</span><br><span class="line">    cxt.closePath();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="在Canvas-js引入drawCanvas-js"><a href="#在Canvas-js引入drawCanvas-js" class="headerlink" title="在Canvas.js引入drawCanvas.js"></a>在Canvas.js引入drawCanvas.js</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> drawCanvas <span class="keyword">from</span> <span class="string">&#x27;drawCanvas.js&#x27;</span>;</span><br><span class="line">Page(<span class="built_in">Object</span>.assign(&#123;&#125;,drawCanvas, &#123;</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 页面的初始数据</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  data: &#123;</span><br><span class="line">    canvasImg: <span class="string">&#x27;https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2635355882,2630309952&amp;fm=218&amp;app=2&amp;f=JPEG?w=121&amp;h=75&amp;s=FF7204C5C0615D0773AD7CD103003098&#x27;</span> <span class="comment">// 实例</span></span><br><span class="line">  &#125;,</span><br><span class="line"> <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 生命周期函数--监听页面加载</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  onLoad: <span class="function"><span class="keyword">function</span> (<span class="params">options</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">this</span>.shareCreate()</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">//分享微信朋友圈</span></span><br><span class="line">  <span class="keyword">async</span> <span class="function"><span class="title">shareCreate</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    <span class="comment">//self.downloadImg是drawCanvas.js里面方法</span></span><br><span class="line">    <span class="keyword">let</span> imgUrl = <span class="keyword">await</span> self.downloadImg(self.data.canvasImg);</span><br><span class="line">    wx.nextTick(<span class="function">() =&gt;</span> &#123; self.drawAll(imgUrl) &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">    <span class="function"><span class="title">drawAll</span>(<span class="params">imgUrl</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> query = wx.createSelectorQuery()</span><br><span class="line">    <span class="keyword">const</span> node = query.select(<span class="string">&#x27;#canvas&#x27;</span>).node();</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    node.exec(<span class="keyword">async</span> res =&gt; &#123;</span><br><span class="line">      <span class="keyword">const</span> canvas = res[<span class="number">0</span>].node;</span><br><span class="line">      <span class="comment">//设置宽高</span></span><br><span class="line">      canvas.width = canvas._width</span><br><span class="line">      canvas.height = canvas._height</span><br><span class="line">      <span class="keyword">const</span> ctx = canvas.getContext(<span class="string">&#x27;2d&#x27;</span>);</span><br><span class="line">      <span class="comment">//背景图</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, <span class="string">&quot;/images/shareImg.png&quot;</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">777</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//cover</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line"></span><br><span class="line">      <span class="comment">//logo</span></span><br><span class="line">      <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">50</span>, <span class="number">525</span>, <span class="number">363</span>, <span class="number">45</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">      <span class="built_in">setTimeout</span>(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">        <span class="comment">//背景透明</span></span><br><span class="line">        ctx.fillStyle = <span class="string">&#x27;rgba(0, 0, 0, 0.6)&#x27;</span>;</span><br><span class="line">        ctx.fillRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line">        <span class="comment">//绘制空心矩形</span></span><br><span class="line">        ctx.strokeStyle = <span class="string">&#x27;rgba(0, 0, 0, 0.6)&#x27;</span>;</span><br><span class="line">        ctx.strokeRect(<span class="number">0</span>, <span class="number">0</span>, <span class="number">750</span>, <span class="number">460</span>);</span><br><span class="line">        ctx.save();</span><br><span class="line">        <span class="comment">//title</span></span><br><span class="line">        ctx.textAlign = <span class="string">&#x27;left&#x27;</span>;</span><br><span class="line">        ctx.fillStyle = <span class="string">&#x27;rgba(255, 255, 255, 1)&#x27;</span>;</span><br><span class="line">        ctx.font = <span class="string">&quot;normal bold 41px PingFangSC-Regular&quot;</span>;</span><br><span class="line">        self.drawTxt(ctx, <span class="string">&quot;测试卡片&quot;</span>, <span class="number">50</span>, <span class="number">390</span>, <span class="number">30</span>, <span class="number">50</span>, <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">//desc</span></span><br><span class="line">        ctx.textAlign = <span class="string">&#x27;left&#x27;</span>;</span><br><span class="line">        ctx.fillStyle = <span class="string">&quot;#1e1e1e&quot;</span>;</span><br><span class="line">        ctx.font = <span class="string">&quot;normal normal 28px PingFangSC-Regular&quot;</span>;</span><br><span class="line">        self.drawTxt(ctx, <span class="string">&quot;测试卡片测试卡片测试卡测试卡片片测试卡片测试卡片测试卡片测试卡片测试卡片测试卡片片测试卡片测试卡片&quot;</span>, <span class="number">159</span>, <span class="number">661</span>, <span class="number">18</span>, <span class="number">43</span>, <span class="number">2</span>);</span><br><span class="line">        <span class="comment">//裁切圆角 </span></span><br><span class="line">        self.drawRoundRect(ctx, <span class="number">50</span>, <span class="number">625</span>, <span class="number">92</span>, <span class="number">92</span>, <span class="number">46</span>);</span><br><span class="line">        ctx.clip();</span><br><span class="line">        ctx.stroke();</span><br><span class="line">        <span class="comment">//头像</span></span><br><span class="line">        <span class="keyword">await</span> self.drawImage(canvas, ctx, imgUrl, <span class="number">50</span>, <span class="number">625</span>, <span class="number">92</span>, <span class="number">92</span>);</span><br><span class="line">        ctx.restore();</span><br><span class="line">        ctx.closePath();</span><br><span class="line">        <span class="comment">//canvas转成图片</span></span><br><span class="line">        self.previewHB(canvas)</span><br><span class="line">      &#125;, <span class="number">500</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">   <span class="comment">//图片预览</span></span><br><span class="line">  <span class="function"><span class="title">previewHB</span>(<span class="params">canvas</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> self = <span class="built_in">this</span>;</span><br><span class="line">    wx.nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">//转换图片</span></span><br><span class="line">      wx.canvasToTempFilePath(&#123;</span><br><span class="line">        canvas: canvas,</span><br><span class="line">        success:<span class="keyword">async</span> (res)=&gt; &#123;</span><br><span class="line">          <span class="keyword">let</span> img=res.tempFilePath</span><br><span class="line">          <span class="comment">//预览</span></span><br><span class="line">          wx.previewImage(&#123;</span><br><span class="line">            urls: [img]</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;&#125;)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 下载图片函数</span>
+  <span class="token function">downloadImg</span><span class="token punctuation">(</span><span class="token parameter">img</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">Promise</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">resolve<span class="token punctuation">,</span> reject</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//将网络图片转成本地路径     </span>
+      <span class="token comment">// wx.getImageInfo({</span>
+      <span class="token comment">//   src: img,</span>
+      <span class="token comment">//   success: function (res) {</span>
+      <span class="token comment">//     resolve(res.path)</span>
+
+      <span class="token comment">//   }</span>
+      <span class="token comment">// })</span>
+      <span class="token comment">//方法二</span>
+      wx<span class="token punctuation">.</span><span class="token function">downloadFile</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token operator">:</span> img<span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> cover <span class="token operator">=</span> res<span class="token punctuation">.</span>tempFilePath<span class="token punctuation">;</span>
+          <span class="token function">resolve</span><span class="token punctuation">(</span>cover<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token function-variable function">fail</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token parameter">err</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+
+          <span class="token function">reject</span><span class="token punctuation">(</span>err<span class="token punctuation">)</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">//图片渲染</span>
+  <span class="token function">drawImage</span><span class="token punctuation">(</span><span class="token parameter">canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ctx<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> img <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">createImage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    img<span class="token punctuation">.</span>src <span class="token operator">=</span> imgUrl
+    img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> ctx<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>img<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> w<span class="token punctuation">,</span> h<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">//文字换行</span>
+  <span class="token function-variable function">drawTxt</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">ctx<span class="token punctuation">,</span> _str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y<span class="token punctuation">,</span> _total<span class="token punctuation">,</span> _lineh<span class="token punctuation">,</span> _linenum</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>_str <span class="token operator">==</span> <span class="token string">""</span> <span class="token operator">||</span> _str <span class="token operator">==</span> <span class="token keyword">undefined</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">var</span> total <span class="token operator">=</span> _total <span class="token operator">?</span> _total <span class="token operator">:</span> <span class="token number">15</span><span class="token punctuation">;</span> <span class="token comment">//每行字数（数字算半个）</span>
+    <span class="token keyword">var</span> lineH <span class="token operator">=</span> _lineh <span class="token operator">?</span> _lineh <span class="token operator">:</span> <span class="token number">20</span><span class="token punctuation">;</span> <span class="token comment">//行间距</span>
+    <span class="token keyword">var</span> lineNum <span class="token operator">=</span> _linenum <span class="token operator">?</span> _linenum <span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token comment">//最大显示行数</span>
+
+    <span class="token comment">/*
+    拆解字符串到数组，按行，每行15个（判断数字占半个，其他占1个）
+    */</span>
+    <span class="token keyword">var</span> lineArray <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> len <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment">//数字算半个，中文算一个</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> _str<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> line <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">ceil</span><span class="token punctuation">(</span>len<span class="token punctuation">)</span> <span class="token operator">%</span> total <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>lineArray<span class="token punctuation">[</span>lineArray<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">""</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          lineArray<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">var</span> index <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>len <span class="token operator">/</span> total<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//</span>
+      lineArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">=</span> lineArray<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">+</span> _str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isNaN</span><span class="token punctuation">(</span>_str<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//是数字</span>
+        len <span class="token operator">=</span> len <span class="token operator">+</span> <span class="token number">0.5</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        len <span class="token operator">=</span> len <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> lineArray<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> t_str <span class="token operator">=</span> lineArray<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>lineArray<span class="token punctuation">.</span>length <span class="token operator">&gt;</span> lineNum <span class="token operator">&amp;&amp;</span> i <span class="token operator">==</span> <span class="token punctuation">(</span>lineNum <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment">//如果总行数大于设定的行数，则到最大设定行时，加省略号，退出</span>
+        t_str <span class="token operator">=</span> t_str <span class="token operator">+</span> <span class="token string">'...'</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span>t_str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y <span class="token operator">+</span> lineH <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">break</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillText</span><span class="token punctuation">(</span>t_str<span class="token punctuation">,</span> _x<span class="token punctuation">,</span> _y <span class="token operator">+</span> lineH <span class="token operator">*</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+  <span class="token comment">//裁切圆角  </span>
+  <span class="token function-variable function">drawRoundRect</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">cxt<span class="token punctuation">,</span> x<span class="token punctuation">,</span> y<span class="token punctuation">,</span> width<span class="token punctuation">,</span> height<span class="token punctuation">,</span> radius</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cxt<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    cxt<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>x <span class="token operator">+</span> radius<span class="token punctuation">,</span> y <span class="token operator">+</span> radius<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>width <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">+</span> y <span class="token operator">-</span> radius<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>width <span class="token operator">-</span> radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">-</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">+</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>radius <span class="token operator">+</span> x<span class="token punctuation">,</span> height <span class="token operator">-</span> radius <span class="token operator">+</span> y<span class="token punctuation">,</span> radius<span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">*</span> <span class="token number">1</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">,</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cxt<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="在Canvas-js引入drawCanvas-js"><a href="#在Canvas-js引入drawCanvas-js" class="headerlink" title="在Canvas.js引入drawCanvas.js"></a>在Canvas.js引入drawCanvas.js</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">import</span> drawCanvas <span class="token keyword">from</span> <span class="token string">'drawCanvas.js'</span><span class="token punctuation">;</span>
+<span class="token function">Page</span><span class="token punctuation">(</span>Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>drawCanvas<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+ <span class="token comment">/**
+   * 页面的初始数据
+   */</span>
+  data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    canvasImg<span class="token operator">:</span> <span class="token string">'https://dss0.baidu.com/6ONWsjip0QIZ8tyhnq/it/u=2635355882,2630309952&amp;fm=218&amp;app=2&amp;f=JPEG?w=121&amp;h=75&amp;s=FF7204C5C0615D0773AD7CD103003098'</span> <span class="token comment">// 实例</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+ <span class="token comment">/**
+   * 生命周期函数--监听页面加载
+   */</span>
+  <span class="token function-variable function">onLoad</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">options</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">shareCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token comment">//分享微信朋友圈</span>
+  <span class="token keyword">async</span> <span class="token function">shareCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token comment">//self.downloadImg是drawCanvas.js里面方法</span>
+    <span class="token keyword">let</span> imgUrl <span class="token operator">=</span> <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">downloadImg</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>data<span class="token punctuation">.</span>canvasImg<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> self<span class="token punctuation">.</span><span class="token function">drawAll</span><span class="token punctuation">(</span>imgUrl<span class="token punctuation">)</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">drawAll</span><span class="token punctuation">(</span><span class="token parameter">imgUrl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> query <span class="token operator">=</span> wx<span class="token punctuation">.</span><span class="token function">createSelectorQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">const</span> node <span class="token operator">=</span> query<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token string">'#canvas'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">node</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    node<span class="token punctuation">.</span><span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> canvas <span class="token operator">=</span> res<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>node<span class="token punctuation">;</span>
+      <span class="token comment">//设置宽高</span>
+      canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> canvas<span class="token punctuation">.</span>_width
+      canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> canvas<span class="token punctuation">.</span>_height
+      <span class="token keyword">const</span> ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">'2d'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token comment">//背景图</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> <span class="token string">"/images/shareImg.png"</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">777</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//cover</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token comment">//logo</span>
+      <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">525</span><span class="token punctuation">,</span> <span class="token number">363</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+
+      <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        <span class="token comment">//背景透明</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgba(0, 0, 0, 0.6)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">fillRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//绘制空心矩形</span>
+        ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> <span class="token string">'rgba(0, 0, 0, 0.6)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">strokeRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">750</span><span class="token punctuation">,</span> <span class="token number">460</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">save</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//title</span>
+        ctx<span class="token punctuation">.</span>textAlign <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">'rgba(255, 255, 255, 1)'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">"normal bold 41px PingFangSC-Regular"</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span><span class="token function">drawTxt</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token string">"测试卡片"</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">390</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token comment">//desc</span>
+        ctx<span class="token punctuation">.</span>textAlign <span class="token operator">=</span> <span class="token string">'left'</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> <span class="token string">"#1e1e1e"</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span>font <span class="token operator">=</span> <span class="token string">"normal normal 28px PingFangSC-Regular"</span><span class="token punctuation">;</span>
+        self<span class="token punctuation">.</span><span class="token function">drawTxt</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token string">"测试卡片测试卡片测试卡测试卡片片测试卡片测试卡片测试卡片测试卡片测试卡片测试卡片片测试卡片测试卡片"</span><span class="token punctuation">,</span> <span class="token number">159</span><span class="token punctuation">,</span> <span class="token number">661</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">,</span> <span class="token number">43</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//裁切圆角 </span>
+        self<span class="token punctuation">.</span><span class="token function">drawRoundRect</span><span class="token punctuation">(</span>ctx<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">625</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">46</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">clip</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//头像</span>
+        <span class="token keyword">await</span> self<span class="token punctuation">.</span><span class="token function">drawImage</span><span class="token punctuation">(</span>canvas<span class="token punctuation">,</span> ctx<span class="token punctuation">,</span> imgUrl<span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">625</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">,</span> <span class="token number">92</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">restore</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//canvas转成图片</span>
+        self<span class="token punctuation">.</span><span class="token function">previewHB</span><span class="token punctuation">(</span>canvas<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token number">500</span><span class="token punctuation">)</span>
+
+
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+   <span class="token comment">//图片预览</span>
+  <span class="token function">previewHB</span><span class="token punctuation">(</span><span class="token parameter">canvas</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    wx<span class="token punctuation">.</span><span class="token function">nextTick</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">//转换图片</span>
+      wx<span class="token punctuation">.</span><span class="token function">canvasToTempFilePath</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        canvas<span class="token operator">:</span> canvas<span class="token punctuation">,</span>
+        <span class="token function-variable function">success</span><span class="token operator">:</span><span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token parameter">res</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+          <span class="token keyword">let</span> img<span class="token operator">=</span>res<span class="token punctuation">.</span>tempFilePath
+          <span class="token comment">//预览</span>
+          wx<span class="token punctuation">.</span><span class="token function">previewImage</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+            urls<span class="token operator">:</span> <span class="token punctuation">[</span>img<span class="token punctuation">]</span>
+          <span class="token punctuation">}</span><span class="token punctuation">)</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="希望大家能够用到！"><a href="#希望大家能够用到！" class="headerlink" title="希望大家能够用到！"></a>希望大家能够用到！</h2>]]></content>
       <categories>
         <category>小程序</category>
+        <category>Canvas</category>
       </categories>
       <tags>
-        <tag>canvas</tag>
+        <tag>小程序</tag>
       </tags>
   </entry>
 </search>

@@ -333,6 +333,13 @@
 
 <div class="carousel carousel-slider center index-cover" data-indicators="true" style="margin-top: -64px;">
     
+        <div id="prev-cover" class="left waves-effect carousel-control">
+            <i class="icon fa fa-angle-left"></i>
+        </div>
+        <div id="next-cover" class="right waves-effect carousel-control">
+            <i class="icon fa fa-angle-right"></i>
+        </div>
+    
 
     <div class="carousel-item red white-text bg-cover about-cover">
         <div class="container">
@@ -391,6 +398,10 @@
     </a>
 
 
+    <a href="https://blog.csdn.net/weixin_41977619" class="tooltipped" target="_blank" data-tooltip="访问我的CSDN" data-position="top" data-delay="50">
+        <i class="fa fa-copyright"></i>
+    </a>
+
 
     <a href="mailto:1849174241@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
@@ -407,6 +418,10 @@
     </a>
 
 
+    <a href="javascript:;" class="tooltipped" data-tooltip="微信联系我: 17610030186" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
+
 
 
 
@@ -420,6 +435,56 @@
         </div>
     </div>
 
+    
+        
+
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/10.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">vue 配置移动单位转换插件</div>
+                            <div class="description center-align">
+                                
+                                    在项目中填写美工人员设计好的 px 尺寸，即可自动转换为 rem 尺寸，自适应不同分辨率的屏幕,主要用到了amfe-flexible和postcss-pxtorem
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/60b0/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('/medias/featureimages/14.jpg');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">小程序canvas生成海报</div>
+                            <div class="description center-align">
+                                
+                                    不同商品分享的是后生成不同的图片，每个商品的信息图片不同，小程序默认分享的是页面默认截图/小程序分享朋友圈，生成海报
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/posts/26da/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
     
 </div>
 
@@ -545,8 +610,7 @@
                 </a>
                 <p class="post-description">
                     
-                        首先安装(自己创建一个vue项目,这儿就直接跳过了)npm i  amfe-flexible -S
-npm i postcss-pxtore
+                        在项目中填写美工人员设计好的 px 尺寸，即可自动转换为 rem 尺寸，自适应不同分辨率的屏幕,主要用到了amfe-flexible和postcss-pxtorem
                     
                 </p>
                 <a href="/posts/60b0/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FF5E3A 0%, #FF2A68 100%)" target="_blank">
@@ -576,11 +640,7 @@ npm i postcss-pxtore
                 </a>
                 <p class="post-description">
                     
-                        如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
-先看看效果图 以下↓
-使用场景
-分享小程序的，绘制分享图
-不同商品分享的
+                        不同商品分享的是后生成不同的图片，每个商品的信息图片不同，小程序默认分享的是页面默认截图/小程序分享朋友圈，生成海报
                     
                 </p>
                 <a href="/posts/26da/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #EF4DB6 0%, #C643FC 100%)" target="_blank">
@@ -623,7 +683,7 @@ npm i postcss-pxtore
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                                hexo部分配置
                             
                         </div>
                         <div class="publish-info">
@@ -670,19 +730,12 @@ npm i postcss-pxtore
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                获取route第一种//监听,当路由发生变化的时候执行
-
-       watch:{
-         $route(to,from){
-           console.log(to);
-         }
-       }
-第二
+                                vue路由监听的几中方式
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-08
                             </span>
                             <span class="publish-author">
                                 
@@ -724,16 +777,12 @@ npm i postcss-pxtore
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                问题描述在使用vant中Tab 标签, 点击显示会出现下划线位置异常,如下图:
-
-代码片段&lt;template&gt;
-  &lt;div id="app"&gt;
-    &lt;van-button type="primary" @
+                                vue vant tabs组件选中下划线位置异常处理方式
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-30
                             </span>
                             <span class="publish-author">
                                 
@@ -770,41 +819,36 @@ npm i postcss-pxtore
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/26da/">
+                    <a href="/posts/a8fd7b10/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="小程序canvas生成海报">
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="前端面试题-Webpack">
                             
-                            <span class="card-title">小程序canvas生成海报</span>
+                            <span class="card-title">前端面试题-Webpack</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
-先看看效果图 以下↓
-使用场景
-分享小程序的，绘制分享图
-不同商品分享的是后生成不同的图片，每个商品的信息图片不同，小程序默认分享的是页面默认截图
-小程序分享朋友圈，生成海
+                                又到了一年一度跑路跳槽的时刻，由于个人的一些原因最近也参加了很多面试，发现有很多基础性的东西掌握程度还是不够，故此想总结一下最近面试遇到的问题以及个人认为比较重要的东西，留给自己消化，也分享给有需要的小伙伴
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-23
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
-                                    小程序
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    面试
                                 </a>
                                 
-                                <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/CANVAS/" class="post-category">
-                                    Canvas
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/WEBPACK/" class="post-category">
+                                    Webpack
                                 </a>
                                 
                                 
@@ -815,12 +859,12 @@ npm i postcss-pxtore
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                            <span class="chip bg-color">小程序</span>
+                        <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                            <span class="chip bg-color">面试</span>
                         </a>
                         
-                        <a href="/tags/CANVAS/">
-                            <span class="chip bg-color">Canvas</span>
+                        <a href="/tags/WEBPACK/">
+                            <span class="chip bg-color">Webpack</span>
                         </a>
                         
                     </div>
@@ -830,34 +874,36 @@ npm i postcss-pxtore
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/92b5/">
+                    <a href="/posts/f738ebc/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="es6语法通过babel转码为es5普通语法的配置">
+                            <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="前端面试题-Vue">
                             
-                            <span class="card-title">es6语法通过babel转码为es5普通语法的配置</span>
+                            <span class="card-title">前端面试题-Vue</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
-在一个空文件夹里初始化npm init -y
-安装npm install --save-dev @babel/core @babel/cli @babel/preset-e
+                                又到了一年一度跑路跳槽的时刻，由于个人的一些原因最近也参加了很多面试，发现有很多基础性的东西掌握程度还是不够，故此想总结一下最近面试遇到的问题以及个人认为比较重要的东西，留给自己消化，也分享给有需要的小伙伴
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-21
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/ES6/" class="post-category">
-                                    ES6
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    面试
+                                </a>
+                                
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/VUE/" class="post-category">
+                                    Vue
                                 </a>
                                 
                                 
@@ -868,8 +914,12 @@ npm i postcss-pxtore
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/ES6/">
-                            <span class="chip bg-color">ES6</span>
+                        <a href="/tags/VUE/">
+                            <span class="chip bg-color">Vue</span>
+                        </a>
+                        
+                        <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                            <span class="chip bg-color">面试</span>
                         </a>
                         
                     </div>
@@ -879,38 +929,36 @@ npm i postcss-pxtore
             
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/posts/73f0/">
+                    <a href="/posts/1b62566/">
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="在微信小程序中引入 Iconfont 阿里巴巴图标">
+                            <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="前端面试题-JavaScript">
                             
-                            <span class="card-title">在微信小程序中引入 Iconfont 阿里巴巴图标</span>
+                            <span class="card-title">前端面试题-JavaScript</span>
                         </div>
                     </a>
 
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                                前言如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
-在小程序中，有默认的图标icon组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标
-下面，就让我们一起去研究一下怎么
+                                又到了一年一度跑路跳槽的时刻，由于个人的一些原因最近也参加了很多面试，发现有很多基础性的东西掌握程度还是不够，故此想总结一下最近面试遇到的问题以及个人认为比较重要的东西，留给自己消化，也分享给有需要的小伙伴
                             
                         </div>
                         <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-18
                             </span>
                             <span class="publish-author">
                                 
                                 <i class="fas fa-bookmark fa-fw icon-category"></i>
                                 
-                                <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
-                                    小程序
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/" class="post-category">
+                                    面试
                                 </a>
                                 
-                                <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/ICONFONT/" class="post-category">
-                                    Iconfont
+                                <a href="/categories/%E9%9D%A2%E8%AF%95/JAVASCRIPT/" class="post-category">
+                                    JavaScript
                                 </a>
                                 
                                 
@@ -921,12 +969,12 @@ npm i postcss-pxtore
                     
                     <div class="card-action article-tags">
                         
-                        <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
-                            <span class="chip bg-color">小程序</span>
+                        <a href="/tags/%E9%9D%A2%E8%AF%95/">
+                            <span class="chip bg-color">面试</span>
                         </a>
                         
-                        <a href="/tags/ICONFONT/">
-                            <span class="chip bg-color">Iconfont</span>
+                        <a href="/tags/JAVASCRIPT/">
+                            <span class="chip bg-color">JavaScript</span>
                         </a>
                         
                     </div>
@@ -1035,7 +1083,7 @@ npm i postcss-pxtore
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">4.7k</span>&nbsp;字
+                class="white-color">18.1k</span>&nbsp;字
             
             
             
@@ -1064,6 +1112,10 @@ npm i postcss-pxtore
     </a>
 
 
+    <a href="https://blog.csdn.net/weixin_41977619" class="tooltipped" target="_blank" data-tooltip="访问我的CSDN" data-position="top" data-delay="50">
+        <i class="fa fa-copyright"></i>
+    </a>
+
 
     <a href="mailto:1849174241@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
@@ -1079,6 +1131,10 @@ npm i postcss-pxtore
         <i class="fab fa-qq"></i>
     </a>
 
+
+    <a href="javascript:;" class="tooltipped" data-tooltip="微信联系我: 17610030186" data-position="top" data-delay="50">
+        <i class="fab fa-weixin"></i>
+    </a>
 
 
 

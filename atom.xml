@@ -6,7 +6,7 @@
   <link href="https://haobaic.github.io/atom.xml" rel="self"/>
   
   <link href="https://haobaic.github.io/"/>
-  <updated>2020-12-24T04:52:11.481Z</updated>
+  <updated>2020-12-24T13:26:50.482Z</updated>
   <id>https://haobaic.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://haobaic.github.io/posts/263a265d/"/>
     <id>https://haobaic.github.io/posts/263a265d/</id>
     <published>2020-12-24T03:08:28.904Z</published>
-    <updated>2020-12-24T04:52:11.481Z</updated>
+    <updated>2020-12-24T13:26:50.482Z</updated>
     
     
       
@@ -45,8 +45,8 @@
     <title>vue 路由监听</title>
     <link href="https://haobaic.github.io/posts/5c75/"/>
     <id>https://haobaic.github.io/posts/5c75/</id>
-    <published>2020-12-18T04:20:59.873Z</published>
-    <updated>2020-12-24T10:07:00.052Z</updated>
+    <published>2020-12-07T16:00:00.000Z</published>
+    <updated>2020-12-24T13:26:05.090Z</updated>
     
     
       
@@ -70,8 +70,8 @@
     <title>vue vant tabs组件选中下划线位置异常</title>
     <link href="https://haobaic.github.io/posts/4b76/"/>
     <id>https://haobaic.github.io/posts/4b76/</id>
-    <published>2020-12-18T04:20:50.419Z</published>
-    <updated>2020-12-24T10:15:06.617Z</updated>
+    <published>2020-10-29T16:00:00.000Z</published>
+    <updated>2020-12-24T13:26:37.178Z</updated>
     
     
       
@@ -97,11 +97,180 @@
   </entry>
   
   <entry>
+    <title>前端面试题-Webpack</title>
+    <link href="https://haobaic.github.io/posts/a8fd7b10/"/>
+    <id>https://haobaic.github.io/posts/a8fd7b10/</id>
+    <published>2020-10-22T16:00:00.000Z</published>
+    <updated>2020-12-24T13:40:36.341Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
+
+&lt;p&gt; &lt;a href=&quot;#w1&quot;&gt;1.对webpack的了解&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#w2&quot;&gt;2.webpack，里面的webpack.config.js怎么配置&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="Webpack" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/WEBPACK/"/>
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="Webpack" scheme="https://haobaic.github.io/tags/WEBPACK/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试题-Vue</title>
+    <link href="https://haobaic.github.io/posts/f738ebc/"/>
+    <id>https://haobaic.github.io/posts/f738ebc/</id>
+    <published>2020-10-20T16:00:00.000Z</published>
+    <updated>2020-12-24T13:40:10.545Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
+
+&lt;p&gt; &lt;a href=&quot;#k1&quot;&gt;1. 说一下Vue的双向绑定数据的原理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#k2&quot;&gt;2. 解释单向数据流和双向数据绑定&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#k3&quot;&gt;3. Vue如何去除url中的</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="Vue" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/VUE/"/>
+    
+    
+    <category term="Vue" scheme="https://haobaic.github.io/tags/VUE/"/>
+    
+    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试题-JavaScript</title>
+    <link href="https://haobaic.github.io/posts/1b62566/"/>
+    <id>https://haobaic.github.io/posts/1b62566/</id>
+    <published>2020-10-17T16:00:00.000Z</published>
+    <updated>2020-12-24T13:37:48.512Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
+
+&lt;p&gt; &lt;a href=&quot;#j1&quot;&gt;1. JavaScript 有哪些数据类型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#j2&quot;&gt;2. 怎么判断不同的JS数据类型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#j3&quot;&gt;3. undefined 和</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="JavaScript" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/JAVASCRIPT/"/>
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="JavaScript" scheme="https://haobaic.github.io/tags/JAVASCRIPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端面试题-HTML+CSS</title>
+    <link href="https://haobaic.github.io/posts/dfa02f9b/"/>
+    <id>https://haobaic.github.io/posts/dfa02f9b/</id>
+    <published>2020-10-14T16:00:00.000Z</published>
+    <updated>2020-12-24T13:36:31.455Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;#start&quot;&gt;前言&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;#html&quot;&gt;HTML部分&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#l1&quot;&gt;1. Doctype作用，HTML5</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="HTML" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/HTML/"/>
+    
+    <category term="CSS" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/HTML/CSS/"/>
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="HTML" scheme="https://haobaic.github.io/tags/HTML/"/>
+    
+    <category term="CSS" scheme="https://haobaic.github.io/tags/CSS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>小程序面试题</title>
+    <link href="https://haobaic.github.io/posts/f86d3988/"/>
+    <id>https://haobaic.github.io/posts/f86d3988/</id>
+    <published>2020-10-11T16:00:00.000Z</published>
+    <updated>2020-12-24T13:32:33.756Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
+
+&lt;p&gt; &lt;a href=&quot;#w1&quot;&gt;1. 简单描述下微信小程序的相关文件类型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#w2&quot;&gt;2. 简述微信小程序原理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt; &lt;a href=&quot;#w3&quot;&gt;3.</summary>
+        
+      
+    
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="小程序" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    
+    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+    <category term="小程序" scheme="https://haobaic.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>小程序canvas生成海报</title>
     <link href="https://haobaic.github.io/posts/26da/"/>
     <id>https://haobaic.github.io/posts/26da/</id>
-    <published>2020-12-18T04:20:39.090Z</published>
-    <updated>2020-12-24T10:14:23.181Z</updated>
+    <published>2020-09-28T16:00:00.000Z</published>
+    <updated>2020-12-24T13:16:33.206Z</updated>
     
     
       
@@ -130,15 +299,15 @@
     <title>es6语法通过babel转码为es5普通语法的配置</title>
     <link href="https://haobaic.github.io/posts/92b5/"/>
     <id>https://haobaic.github.io/posts/92b5/</id>
-    <published>2020-12-18T04:20:25.092Z</published>
-    <updated>2020-12-24T10:05:41.717Z</updated>
+    <published>2020-08-09T16:00:00.000Z</published>
+    <updated>2020-12-24T13:23:50.829Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过&lt;/p&gt;
+    <summary type="html">&lt;p&gt;,如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过&lt;/p&gt;
 &lt;h2 id=&quot;在一个空文件夹里初始化&quot;&gt;&lt;a href=&quot;#在一个空文件夹里初始化&quot; class=&quot;headerlink&quot;</summary>
         
       
@@ -156,8 +325,8 @@
     <title>在微信小程序中引入 Iconfont 阿里巴巴图标</title>
     <link href="https://haobaic.github.io/posts/73f0/"/>
     <id>https://haobaic.github.io/posts/73f0/</id>
-    <published>2020-12-18T04:19:50.675Z</published>
-    <updated>2020-12-24T10:14:41.048Z</updated>
+    <published>2020-06-02T16:00:00.000Z</published>
+    <updated>2020-12-24T13:22:25.153Z</updated>
     
     
       
@@ -185,8 +354,8 @@
     <title>vue 配置移动单位转换插件</title>
     <link href="https://haobaic.github.io/posts/60b0/"/>
     <id>https://haobaic.github.io/posts/60b0/</id>
-    <published>2020-12-18T04:04:05.596Z</published>
-    <updated>2020-12-24T10:10:20.795Z</updated>
+    <published>2020-06-01T16:00:00.000Z</published>
+    <updated>2020-12-24T13:28:53.419Z</updated>
     
     
       
@@ -203,39 +372,6 @@
     
     
     <category term="Vue" scheme="https://haobaic.github.io/tags/VUE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小程序面试题</title>
-    <link href="https://haobaic.github.io/posts/f86d3988/"/>
-    <id>https://haobaic.github.io/posts/f86d3988/</id>
-    <published>2020-10-12T07:10:06.000Z</published>
-    <updated>2020-12-24T10:14:34.199Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3&gt;目录&lt;/h3&gt;
-
-&lt;p&gt; &lt;a href=&quot;#w1&quot;&gt;1. 简单描述下微信小程序的相关文件类型&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;#w2&quot;&gt;2. 简述微信小程序原理&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt; &lt;a href=&quot;#w3&quot;&gt;3.</summary>
-        
-      
-    
-    
-    
-    <category term="面试" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    <category term="小程序" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    
-    <category term="小程序" scheme="https://haobaic.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
-    
-    <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   

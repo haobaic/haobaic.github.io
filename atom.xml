@@ -71,7 +71,7 @@
     <link href="https://haobaic.github.io/posts/4b76/"/>
     <id>https://haobaic.github.io/posts/4b76/</id>
     <published>2020-12-18T04:20:50.419Z</published>
-    <updated>2020-12-24T10:06:52.649Z</updated>
+    <updated>2020-12-24T10:15:06.617Z</updated>
     
     
       
@@ -92,6 +92,8 @@
     
     <category term="Vue" scheme="https://haobaic.github.io/tags/VUE/"/>
     
+    <category term="Vant" scheme="https://haobaic.github.io/tags/VANT/"/>
+    
   </entry>
   
   <entry>
@@ -99,7 +101,7 @@
     <link href="https://haobaic.github.io/posts/26da/"/>
     <id>https://haobaic.github.io/posts/26da/</id>
     <published>2020-12-18T04:20:39.090Z</published>
-    <updated>2020-12-24T10:06:14.784Z</updated>
+    <updated>2020-12-24T10:14:23.181Z</updated>
     
     
       
@@ -119,6 +121,8 @@
     
     
     <category term="小程序" scheme="https://haobaic.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+    <category term="Canvas" scheme="https://haobaic.github.io/tags/CANVAS/"/>
     
   </entry>
   
@@ -153,7 +157,7 @@
     <link href="https://haobaic.github.io/posts/73f0/"/>
     <id>https://haobaic.github.io/posts/73f0/</id>
     <published>2020-12-18T04:19:50.675Z</published>
-    <updated>2020-12-24T10:06:24.950Z</updated>
+    <updated>2020-12-24T10:14:41.048Z</updated>
     
     
       
@@ -173,6 +177,8 @@
     
     <category term="小程序" scheme="https://haobaic.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
+    <category term="Iconfont" scheme="https://haobaic.github.io/tags/ICONFONT/"/>
+    
   </entry>
   
   <entry>
@@ -180,7 +186,7 @@
     <link href="https://haobaic.github.io/posts/60b0/"/>
     <id>https://haobaic.github.io/posts/60b0/</id>
     <published>2020-12-18T04:04:05.596Z</published>
-    <updated>2020-12-23T08:38:33.144Z</updated>
+    <updated>2020-12-24T10:10:20.795Z</updated>
     
     
       
@@ -205,7 +211,7 @@
     <link href="https://haobaic.github.io/posts/f86d3988/"/>
     <id>https://haobaic.github.io/posts/f86d3988/</id>
     <published>2020-10-12T07:10:06.000Z</published>
-    <updated>2020-12-24T10:06:33.081Z</updated>
+    <updated>2020-12-24T10:14:34.199Z</updated>
     
     
       
@@ -226,6 +232,8 @@
     
     <category term="小程序" scheme="https://haobaic.github.io/categories/%E9%9D%A2%E8%AF%95/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
+    
+    <category term="小程序" scheme="https://haobaic.github.io/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
     
     <category term="面试" scheme="https://haobaic.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     

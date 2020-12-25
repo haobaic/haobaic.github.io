@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="vue 路由监听, 海芋花语录">
+    <meta name="keywords" content="常见代码规范, 海芋花语录">
     <meta name="description" content="Vue 小程序 Webpack">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>vue 路由监听 | 海芋花语录</title>
+    <title>常见代码规范 | 海芋花语录</title>
     <link rel="icon" type="image/png" href="/medias/avatar.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -291,12 +291,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">vue 路由监听</h1>
+                    <h1 class="description center-align post-title">常见代码规范</h1>
                 </div>
             </div>
         </div>
@@ -412,8 +412,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/VUE/">
-                                <span class="chip bg-color">Vue</span>
+                            <a href="/tags/ESLINT/">
+                                <span class="chip bg-color">Eslint</span>
                             </a>
                         
                     </div>
@@ -424,8 +424,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/VUE/" class="post-category">
-                                Vue
+                            <a href="/categories/ESLINT/" class="post-category">
+                                Eslint
                             </a>
                         
                     </div>
@@ -437,7 +437,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-12-08
+                    2020-07-06
                 </div>
                 
 
@@ -446,7 +446,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    239
+                    369
                 </div>
                 
 
@@ -476,60 +476,30 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="获取route"><a href="#获取route" class="headerlink" title="获取route"></a>获取route</h1><h4 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">//监听,当路由发生变化的时候执行</span>
-
-       watch<span class="token operator">:</span><span class="token punctuation">{</span>
-         <span class="token function">$route</span><span class="token punctuation">(</span><span class="token parameter">to<span class="token punctuation">,</span><span class="token keyword">from</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-           console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>to<span class="token punctuation">)</span><span class="token punctuation">;</span>
-         <span class="token punctuation">}</span>
-       <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token string">'$route'</span><span class="token operator">:</span><span class="token string">'routeChange'</span>
-<span class="token punctuation">}</span><span class="token punctuation">,</span>
-methods<span class="token operator">:</span> <span class="token punctuation">{</span>
-  <span class="token function">routeChange</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
-      $route<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
-        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-         <span class="token comment">// 深度观察监听</span>
-            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token comment">// 配置立即执行属性</span>
-        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="获取route-path"><a href="#获取route-path" class="headerlink" title="获取route.path"></a>获取route.path</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
-      <span class="token string">"$route.path"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
-        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-         <span class="token comment">// 深度观察监听</span>
-            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token comment">// 配置立即执行属性</span>
-        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="获取route-name"><a href="#获取route-name" class="headerlink" title="获取route.name"></a>获取route.name</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript">watch<span class="token operator">:</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 在值发生变化之后，重新加载数据</span>
-      <span class="token string">"$route.name"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token comment">//</span>
-      <span class="token comment">// 通过handler来监听属性变化, 初次调用 newValue为""空字符串， oldValue为 undefined</span>
-        <span class="token function">handler</span><span class="token punctuation">(</span><span class="token parameter">newValue<span class="token punctuation">,</span> oldValue</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-          console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>newValue<span class="token punctuation">)</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-         <span class="token comment">// 深度观察监听</span>
-            deep<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
-        <span class="token comment">// 配置立即执行属性</span>
-        immediate<span class="token operator">:</span> <span class="token boolean">true</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+                <blockquote>
+<p>常见代码规范</p>
+</blockquote>
+<p>这里是配合 <code>vs-code</code> 定制的一份常用代码规则( <code>vue-cli3</code> 同步)</p>
+<p>使用 <code>Eslint</code>(侧重代码质量) 与 <code>prettier</code>(侧重代码格式) 让代码看起来更加优雅</p>
+<p>找到 <code>package.json</code> 文件中的 <code>eslintConfig</code> 删掉它(当然也可以不删，我有强迫症),将 <code>.eslintrc.js</code> 文件添加到项目根目录(如果根目录有这个文件，将里面的内容覆盖掉就可以了)</p>
+<p>主要就是为了添加这个规则，本身的校验规则在 <code>rules</code> 中添加修改就好, 完整 <code>Eslint</code>规则 参考 <a target="_blank" rel="noopener" href="https://eslint.org/docs/rules/">这里</a><br><img src="data:image/jpg;base64,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" alt="原型链"></p>
+<p>接下来将 <code>prettier</code> 添加到项目的根目录中,完整 <code>prettier</code>规则 参考 <a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">这里</a></p>
+<p>这个时候其实是已经可以进行代码规范的校验了，我们运行 <code>npm run lint</code> 就会提示有错误的地方，并且格式化</p>
+<p>但是存在的问题是，现在每次校验错误，都必须先运行一次 <code>npm run lint</code>，并且在 .vue 文件中不能实时显示错误或者警告，这样就很不友好</p>
+<p>解决方法：</p>
+<p><code>Ctrl + Shift + P</code> 搜索 <code>setting</code> 设置选项，打开 <code>setting.json</code> 文件，在里面添加：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token string">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token string">"eslint.autoFixOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token string">"eslint.validate"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"javascript"</span><span class="token punctuation">,</span>
+    <span class="token string">"javascriptreact"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">"language"</span><span class="token operator">:</span> <span class="token string">"vue"</span><span class="token punctuation">,</span>
+        <span class="token string">"autoFix"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样，当我们书写完代码 只需要 <code>Ctrl + S</code> 保存一下，就可以自动格式化单个文件，并且能够实时检查 <code>.vue</code> 文件中的错误和警告</p>
+<p>好了，开始愉快地开发！</p>
 
                 
             </div>
@@ -556,7 +526,7 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://haobaic.github.io/posts/5c75/">https://haobaic.github.io/posts/5c75/</a>
+                    <a href="https://haobaic.github.io/posts/55bfc5cf/">https://haobaic.github.io/posts/55bfc5cf/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -594,8 +564,8 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/VUE/">
-                                    <span class="chip bg-color">Vue</span>
+                                <a href="/tags/ESLINT/">
+                                    <span class="chip bg-color">Eslint</span>
                                 </a>
                             
                         </div>
@@ -640,31 +610,31 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/posts/263a265d/">
+                <a href="/posts/92b5/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="hexo部分配置">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="es6语法通过babel转码为es5普通语法的配置">
                         
-                        <span class="card-title">hexo部分配置</span>
+                        <span class="card-title">es6语法通过babel转码为es5普通语法的配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo部分配置
+                            在实际项目中,es6语法通过babel转码为es5普通语法的配置,如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-24
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/HEXO/" class="post-category">
-                                    hexo
+                            <a href="/categories/ES6/" class="post-category">
+                                    ES6
                                 </a>
                             
                             
@@ -674,8 +644,8 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/HEXO/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/ES6/">
+                        <span class="chip bg-color">ES6</span>
                     </a>
                     
                 </div>
@@ -689,35 +659,35 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/posts/4b76/">
+                <a href="/posts/73f0/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue vant tabs组件选中下划线位置异常">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="在微信小程序中引入 Iconfont 阿里巴巴图标">
                         
-                        <span class="card-title">vue vant tabs组件选中下划线位置异常</span>
+                        <span class="card-title">在微信小程序中引入 Iconfont 阿里巴巴图标</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            vue vant tabs组件选中下划线位置异常处理方式
+                            在小程序中，有默认的图标icon组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/VUE/" class="post-category">
-                                    Vue
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" class="post-category">
+                                    小程序
                                 </a>
                             
-                            <a href="/categories/VUE/VANT/" class="post-category">
-                                    Vant
+                            <a href="/categories/%E5%B0%8F%E7%A8%8B%E5%BA%8F/ICONFONT/" class="post-category">
+                                    Iconfont
                                 </a>
                             
                             
@@ -727,12 +697,12 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/VUE/">
-                        <span class="chip bg-color">Vue</span>
+                    <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">
+                        <span class="chip bg-color">小程序</span>
                     </a>
                     
-                    <a href="/tags/VANT/">
-                        <span class="chip bg-color">Vant</span>
+                    <a href="/tags/ICONFONT/">
+                        <span class="chip bg-color">Iconfont</span>
                     </a>
                     
                 </div>

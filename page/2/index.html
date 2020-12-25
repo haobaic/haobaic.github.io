@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, 海芋花语录">
+    <meta name="keywords" content="海芋花语录">
     <meta name="description" content="Vue 小程序 Webpack">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | 海芋花语录</title>
+    <title>海芋花语录</title>
     <link rel="icon" type="image/png" href="/medias/avatar.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,6 +287,7 @@
 
 </header>
 
+    
     <div class="bg-cover pd-header about-cover">
     <div class="container">
     <div class="row">
@@ -329,167 +330,94 @@
     </div>
 </div>
 
+
 <main class="content">
 
     
 
-<div id="tags" class="container chip-container">
-    <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+    
+
+    <!-- 所有文章卡片 -->
+    <article id="articles" class="container articles">
+        <div class="row article-row">
+            
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/posts/60b0/">
+                        <div class="card-image">
+                            
+                            
+                            <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="vue 配置移动单位转换插件">
+                            
+                            <span class="card-title">vue 配置移动单位转换插件</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                在项目中填写美工人员设计好的 px 尺寸，即可自动转换为 rem 尺寸，自适应不同分辨率的屏幕,主要用到了amfe-flexible和postcss-pxtorem
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-02
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/VUE/" class="post-category">
+                                    Vue
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/VUE/">
+                            <span class="chip bg-color">Vue</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
-                
-                
-                <a href="/tags/ES6/" title="ES6: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="ES6" style="background-color: #F9EBEA;">ES6
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/HEXO/" title="hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="hexo" style="background-color: #F5EEF8;">hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/VUE/" title="Vue: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Vue" style="background-color: #D5F5E3;">Vue
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/VANT/" title="Vant: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Vant" style="background-color: #E8F8F5;">Vant
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E9%9D%A2%E8%AF%95/" title="面试: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="面试" style="background-color: #FEF9E7;">面试
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/HTML/" title="HTML: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="HTML" style="background-color: #F8F9F9;">HTML
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CSS/" title="CSS: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="CSS" style="background-color: #82E0AA;">CSS
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/WEBPACK/" title="Webpack: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Webpack" style="background-color: #D7BDE2;">Webpack
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" title="小程序: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="小程序" style="background-color: #A3E4D7;">小程序
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ICONFONT/" title="Iconfont: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Iconfont" style="background-color: #85C1E9;">Iconfont
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/ESLINT/" title="Eslint: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Eslint" style="background-color: #F8C471;">Eslint
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/CANVAS/" title="Canvas: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="Canvas" style="background-color: #F9E79F;">Canvas
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/JAVASCRIPT/" title="JavaScript: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="JavaScript" style="background-color: #85C1E9;">JavaScript
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-            </div>
+            
+        </div>
+    </article>
+
+</main>
+
+
+<div class="container paging">
+    <div class="row">
+        <div class="col s6 m4 l4">
+            
+            <a href="/"
+               class="left btn-floating btn-large waves-effect waves-light bg-color">
+                <i class="fas fa-angle-left"></i>
+            </a>
+            
+        </div>
+        <div class="page-info col m4 l4 hide-on-small-only">
+            <div class="center-align b-text-gray">2 / 2</div>
+        </div>
+        <div class="col s6 m4 l4">
+            
+            <a class="right btn-floating btn-large disabled">
+                <i class="fas fa-angle-right"></i>
+            </a>
+            
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
 
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"ES6","weight":1,"link":"/tags/ES6/"},{"text":"hexo","weight":1,"link":"/tags/HEXO/"},{"text":"Vue","weight":4,"link":"/tags/VUE/"},{"text":"Vant","weight":1,"link":"/tags/VANT/"},{"text":"面试","weight":5,"link":"/tags/面试/"},{"text":"HTML","weight":1,"link":"/tags/HTML/"},{"text":"CSS","weight":1,"link":"/tags/CSS/"},{"text":"Webpack","weight":1,"link":"/tags/WEBPACK/"},{"text":"小程序","weight":3,"link":"/tags/小程序/"},{"text":"Iconfont","weight":1,"link":"/tags/ICONFONT/"},{"text":"Eslint","weight":1,"link":"/tags/ESLINT/"},{"text":"Canvas","weight":1,"link":"/tags/CANVAS/"},{"text":"JavaScript","weight":1,"link":"/tags/JAVASCRIPT/"}], {
-        autoResize: true
-    });
-</script>
-
-    
-
-</main>
 
 
     <footer class="page-footer bg-color">

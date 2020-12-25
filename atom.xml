@@ -71,7 +71,7 @@
     <link href="https://haobaic.github.io/posts/4b76/"/>
     <id>https://haobaic.github.io/posts/4b76/</id>
     <published>2020-10-29T16:00:00.000Z</published>
-    <updated>2020-12-24T13:26:37.178Z</updated>
+    <updated>2020-12-25T06:40:50.900Z</updated>
     
     
       
@@ -134,7 +134,7 @@
     <link href="https://haobaic.github.io/posts/f738ebc/"/>
     <id>https://haobaic.github.io/posts/f738ebc/</id>
     <published>2020-10-20T16:00:00.000Z</published>
-    <updated>2020-12-24T13:40:10.545Z</updated>
+    <updated>2020-12-25T06:36:31.085Z</updated>
     
     
       
@@ -322,11 +322,40 @@
   </entry>
   
   <entry>
+    <title>常见代码规范</title>
+    <link href="https://haobaic.github.io/posts/55bfc5cf/"/>
+    <id>https://haobaic.github.io/posts/55bfc5cf/</id>
+    <published>2020-07-05T16:00:00.000Z</published>
+    <updated>2020-12-25T06:34:41.307Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;常见代码规范&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这里是配合 &lt;code&gt;vs-code&lt;/code&gt; 定制的一份常用代码规则( &lt;code&gt;vue-cli3&lt;/code&gt; 同步)&lt;/p&gt;
+&lt;p&gt;使用</summary>
+        
+      
+    
+    
+    
+    <category term="Eslint" scheme="https://haobaic.github.io/categories/ESLINT/"/>
+    
+    
+    <category term="Eslint" scheme="https://haobaic.github.io/tags/ESLINT/"/>
+    
+  </entry>
+  
+  <entry>
     <title>在微信小程序中引入 Iconfont 阿里巴巴图标</title>
     <link href="https://haobaic.github.io/posts/73f0/"/>
     <id>https://haobaic.github.io/posts/73f0/</id>
     <published>2020-06-02T16:00:00.000Z</published>
-    <updated>2020-12-24T13:22:25.153Z</updated>
+    <updated>2020-12-25T06:41:05.923Z</updated>
     
     
       

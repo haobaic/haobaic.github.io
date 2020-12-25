@@ -50,7 +50,7 @@ npm install <span class="token operator">--</span>save @babel<span class="token 
     <title>vue vant tabs组件选中下划线位置异常</title>
     <url>/posts/4b76/</url>
     <content><![CDATA[<h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>在使用vant中Tab 标签, 点击显示会出现下划线位置异常,如下图:</p>
-<p><img src="https://img-blog.csdnimg.cn/20201030133509406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201030133509406.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="查看上图"></p>
 <h1 id="代码片段"><a href="#代码片段" class="headerlink" title="代码片段"></a>代码片段</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
@@ -77,7 +77,7 @@ npm install <span class="token operator">--</span>save @babel<span class="token 
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="原因分析"><a href="#原因分析" class="headerlink" title="原因分析"></a>原因分析</h1><p>问题出现的原因是 Tab 挂载的时候会初始化并获取自身宽度，如果处于隐藏状态下，Tab 是获取不到自身宽度的，因此底部条的位置没法正确计算。</p>
-<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在展示 Tab 的时候，调用 Tab 实例上的 resize 方法。<br><img src="https://img-blog.csdnimg.cn/20201030133826792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h1 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h1><p>在展示 Tab 的时候，调用 Tab 实例上的 resize 方法。<br><img src="https://img-blog.csdnimg.cn/20201030133826792.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="查看上图"></p>
 <h1 id="修改后代码"><a href="#修改后代码" class="headerlink" title="修改后代码"></a>修改后代码</h1><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>
   <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string">"app"</span><span class="token operator">&gt;</span>
     <span class="token operator">&lt;</span>van<span class="token operator">-</span>button type<span class="token operator">=</span><span class="token string">"primary"</span> @click<span class="token operator">=</span><span class="token string">"isShow = !isShow"</span><span class="token operator">&gt;</span>点击显示<span class="token operator">&lt;</span><span class="token operator">/</span>van<span class="token operator">-</span>button<span class="token operator">&gt;</span>
@@ -109,7 +109,7 @@ npm install <span class="token operator">--</span>save @babel<span class="token 
   <span class="token punctuation">}</span><span class="token punctuation">,</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p>如下图,问题已经解决<br><img src="https://img-blog.csdnimg.cn/20201030133956332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h1 id="效果图"><a href="#效果图" class="headerlink" title="效果图"></a>效果图</h1><p>如下图,问题已经解决<br><img src="https://img-blog.csdnimg.cn/20201030133956332.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70#pic_center" alt="查看上图"></p>
 <p><a href="https://youzan.github.io/vant/#/zh-CN/tab">vant文档</a><br><a href="https://codesandbox.io/s/vant-issue-moban-forked-jpi82?file=/src/App.vue:0-645">代码片段</a></p>
 ]]></content>
       <categories>
@@ -570,350 +570,6 @@ methods<span class="token operator">:</span> <span class="token punctuation">{</
       </tags>
   </entry>
   <entry>
-    <title>前端面试题-Vue</title>
-    <url>/posts/f738ebc/</url>
-    <content><![CDATA[<h3>目录</h3>
-
-<p> <a href="#k1">1. 说一下Vue的双向绑定数据的原理</a></p>
-<p> <a href="#k2">2. 解释单向数据流和双向数据绑定</a></p>
-<p> <a href="#k3">3. Vue如何去除url中的 #</a></p>
-<p> <a href="#k4">4. 对 MVC、MVVM的理解</a></p>
-<p> <a href="#k5">5. 介绍虚拟DOM</a></p>
-<p> <a href="#k6">6. vue生命周期的理解</a></p>
-<p> <a href="#k7">7. 组件通信</a></p>
-<p> <a href="#k8">8. 路由实现</a></p>
-<p> <a href="#k9">9. v-if 和 v-show 区别</a></p>
-<p> <a href="#k10">10. $route和$router的区别</a></p>
-<p> <a href="#k11">11. NextTick 是做什么的</a></p>
-<p> <a href="#k12">12. Vue 组件 data 为什么必须是函数</a></p>
-<p> <a href="#k13">13. 计算属性computed 和事件 methods 有什么区别</a></p>
-<p> <a href="#k14">14. 对比 jQuery ，Vue 有什么优缺点</a></p>
-<p> <a href="#k15">15. Vue 中怎么自定义指令</a></p>
-<p> <a href="#k16">16. Vue 中怎么自定义过滤器</a></p>
-<p> <a href="#k17">17. 对 keep-alive 的了解</a></p>
-<p> <a href="#k18">18. Vue 中 key 的作用</a></p>
-<p> <a href="#k19">19. 你觉得 Vue 的核心是什么</a></p>
-<p> <a href="#k20">20. vue 等单页面应用的优缺点</a></p>
-<p> <a href="#k21">21. vue-router 使用params与query传参有什么区别</a></p>
-<h5 id="k1">1. 说一下Vue的双向绑定数据的原理</h5>
-
-<blockquote>
-<p><code>vue</code> 实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过 <code>Object.defineProperty()</code> 来劫持各个属性的 <code>setter</code>，<code>getter</code>，在数据变动时发布消息给订阅者，触发相应监听回调</p>
-</blockquote>
-<h5 id="k2">2. 解释单向数据流和双向数据绑定</h5>
-
-<blockquote>
-<p>单向数据流： 顾名思义，数据流是单向的。数据流动方向可以跟踪，流动单一，追查问题的时候可以更快捷。缺点就是写起来不太方便。要使UI发生变更就必须创建各种 <code>action</code> 来维护对应的 <code>state</code></p>
-</blockquote>
-<blockquote>
-<p>双向数据绑定：数据之间是相通的，将数据变更的操作隐藏在框架内部。优点是在表单交互较多的场景下，会简化大量业务无关的代码。缺点就是无法追踪局部状态的变化，增加了出错时 <code>debug</code> 的难度</p>
-</blockquote>
-<h5 id="k3">3. Vue 如何去除url中的 #</h5>
-
-<p><code>vue-router</code> 默认使用 <code>hash</code> 模式，所以在路由加载的时候，项目中的 <code>url</code> 会自带 <code>#</code>。如果不想使用 <code>#</code>， 可以使用 <code>vue-router</code> 的另一种模式 <code>history</code></p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
-  mode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
-  routes<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>需要注意的是，当我们启用 <code>history</code> 模式的时候，由于我们的项目是一个单页面应用，所以在路由跳转的时候，就会出现访问不到静态资源而出现 <code>404</code> 的情况，这时候就需要服务端增加一个覆盖所有情况的候选资源：如果 <code>URL</code> 匹配不到任何静态资源，则应该返回同一个 <code>index.html</code> 页面</p>
-</blockquote>
-<h5 id="k4">4. 对 MVC、MVVM的理解</h5>
-
-<blockquote>
-<p>MVC</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ltadpoles/web-document/master/Other/images/mvc.png" alt="image"></p>
-<p>特点：</p>
-<ol>
-<li><code>View</code> 传送指令到 <code>Controller</code></li>
-<li><code>Controller</code> 完成业务逻辑后，要求 <code>Model</code> 改变状态</li>
-<li><code>Model</code> 将新的数据发送到 <code>View</code>，用户得到反馈</li>
-</ol>
-<p><strong>所有通信都是单向的</strong></p>
-<blockquote>
-<p>MVVM</p>
-</blockquote>
-<p><img src="https://raw.githubusercontent.com/ltadpoles/web-document/master/Other/images/mvvm.png" alt="image"></p>
-<p>特点： </p>
-<ol>
-<li>各部分之间的通信，都是双向的</li>
-<li>采用双向绑定：<code>View</code> 的变动，自动反映在 <code>ViewModel</code>，反之亦然</li>
-</ol>
-<p>具体请移步 <a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">这里</a></p>
-<h5 id="k5">5. 介绍虚拟DOM</h5>
-
-<p><a href="https://www.jianshu.com/p/616999666920">参考这里</a></p>
-<h5 id="k6">6. vue生命周期的理解</h5>
-
-<blockquote>
-<p>vue实例有一个完整的生命周期，生命周期也就是指一个实例从开始创建到销毁的这个过程</p>
-</blockquote>
-<ul>
-<li><code>beforeCreate()</code> 在实例创建之间执行，数据未加载状态</li>
-<li><code>created()</code> 在实例创建、数据加载后，能初始化数据，<code>dom</code>渲染之前执行</li>
-<li><code>beforeMount()</code> 虚拟<code>dom</code>已创建完成，在数据渲染前最后一次更改数据</li>
-<li><code>mounted()</code> 页面、数据渲染完成，真实<code>dom</code>挂载完成</li>
-<li><code>beforeUpadate()</code> 重新渲染之前触发</li>
-<li><code>updated()</code> 数据已经更改完成，<code>dom</code> 也重新 <code>render</code> 完成,更改数据会陷入死循环</li>
-<li><code>beforeDestory()</code> 和 <code>destoryed()</code> 前者是销毁前执行（实例仍然完全可用），后者则是销毁后执行</li>
-</ul>
-<h5 id="k7">7. 组件通信</h5>
-
-<blockquote>
-<p>父组件向子组件通信</p>
-</blockquote>
-<p>子组件通过 <code>props</code> 属性，绑定父组件数据，实现双方通信</p>
-<blockquote>
-<p>子组件向父组件通信</p>
-</blockquote>
-<p>将父组件的事件在子组件中通过 <code>$emit</code> 触发</p>
-<blockquote>
-<p>非父子组件、兄弟组件之间的数据传递</p>
-</blockquote>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/*新建一个Vue实例作为中央事件总嫌*/</span>
-<span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">/*监听事件*/</span>
-event<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-    <span class="token comment">//......do something</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-<span class="token comment">/*触发事件*/</span>
-event<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> <span class="token string">'this is a message.'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>Vuex 数据管理</p>
-</blockquote>
-<h5 id="k8">8. vue-router 路由实现</h5>
-
-<blockquote>
-<p>路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能</p>
-</blockquote>
-<p>参考 <a href="https://zhuanlan.zhihu.com/p/37730038">这里</a></p>
-<h5 id="k9">9. v-if 和 v-show 区别</h5>
-
-<blockquote>
-<p>使用了 <code>v-if</code> 的时候，如果值为 <code>false</code> ，那么页面将不会有这个 <code>html</code> 标签生成。</p>
-</blockquote>
-<blockquote>
-<p><code>v-show</code> 则是不管值为 <code>true</code> 还是 <code>false</code> ，<code>html</code> 元素都会存在，只是 <code>CSS</code> 中的 <code>display</code> 显示或隐藏</p>
-</blockquote>
-<h5 id="k10">10. $route和$router的区别</h5>
-
-<blockquote>
-<p><code>$router</code> 为 <code>VueRouter</code> 实例，想要导航到不同 <code>URL</code>，则使用 <code>$router.push</code> 方法</p>
-</blockquote>
-<blockquote>
-<p><code>$route</code> 为当前 <code>router</code> 跳转对象里面可以获取 <code>name</code> 、 <code>path</code> 、 <code>query</code> 、 <code>params</code> 等</p>
-</blockquote>
-<h5 id="k11">11. NextTick 是做什么的</h5>
-
-<blockquote>
-<p><code>$nextTick</code> 是在下次 <code>DOM</code> 更新循环结束之后执行延迟回调，在修改数据之后使用 <code>$nextTick</code>，则可以在回调中获取更新后的 <code>DOM</code></p>
-</blockquote>
-<p>具体可参考官方文档 <a href="https://cn.vuejs.org/v2/guide/reactivity.html">深入响应式原理</a></p>
-<h5 id="k12">12. Vue 组件 data 为什么必须是函数</h5>
-
-<blockquote>
-<p>因为js本身的特性带来的，如果 <code>data</code> 是一个对象，那么由于对象本身属于引用类型，当我们修改其中的一个属性时，会影响到所有Vue实例的数据。如果将 <code>data</code> 作为一个函数返回一个对象，那么每一个实例的 <code>data</code> 属性都是独立的，不会相互影响了</p>
-</blockquote>
-<h5 id="k13">13. 计算属性computed 和事件 methods 有什么区别</h5>
-
-<p>我们可以将同一函数定义为一个 <code>method</code> 或者一个计算属性。对于最终的结果，两种方式是相同的</p>
-<p>不同点：</p>
-<blockquote>
-<p>computed: 计算属性是基于它们的依赖进行缓存的,只有在它的相关依赖发生改变时才会重新求值</p>
-</blockquote>
-<blockquote>
-<p>对于 <code>method</code> ，只要发生重新渲染，<code>method</code> 调用总会执行该函数</p>
-</blockquote>
-<h5 id="k14">14. 对比 jQuery ，Vue 有什么不同</h5>
-
-<blockquote>
-<p><code>jQuery</code> 专注视图层，通过操作 <code>DOM</code> 去实现页面的一些逻辑渲染； <code>Vue</code> 专注于数据层，通过数据的双向绑定，最终表现在 <code>DOM</code> 层面，减少了 <code>DOM</code> 操作</p>
-</blockquote>
-<blockquote>
-<p><code>Vue</code> 使用了组件化思想，使得项目子集职责清晰，提高了开发效率，方便重复利用，便于协同开发</p>
-</blockquote>
-<h5 id="k15">15. Vue 中怎么自定义指令</h5>
-
-<blockquote>
-<p>全局注册</p>
-</blockquote>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 注册一个全局自定义指令 `v-focus`</span>
-Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
-  <span class="token comment">// 当被绑定的元素插入到 DOM 中时……</span>
-  <span class="token function-variable function">inserted</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 聚焦元素</span>
-    el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>局部注册</p>
-</blockquote>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">directives<span class="token operator">:</span> <span class="token punctuation">{</span>
-  focus<span class="token operator">:</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 指令的定义</span>
-    <span class="token function-variable function">inserted</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-    <span class="token punctuation">}</span>
-  <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>参考 <a href="https://cn.vuejs.org/v2/guide/custom-directive.html">官方文档-自定义指令</a></p>
-<h5 id="k16">16. Vue 中怎么自定义过滤器</h5>
-
-<blockquote>
-<p>可以用全局方法 <code>Vue.filter()</code> 注册一个自定义过滤器，它接收两个参数：过滤器 <code>ID</code> 和过滤器函数。过滤器函数以值为参数，返回转换后的值</p>
-</blockquote>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js">Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'reverse'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-  <span class="token keyword">return</span> value<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 'abc' =&gt; 'cba' --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>message | reverse<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>过滤器也同样接受全局注册和局部注册</p>
-<h5 id="k17">17. 对 keep-alive 的了解</h5>
-
-<blockquote>
-<p><code>keep-alive</code> 是 <code>Vue</code> 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染</p>
-</blockquote>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span><span class="token punctuation">&gt;</span></span>
-    <span class="token comment">&lt;!-- 该组件将被缓存！ --&gt;</span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keep-alive</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>可以使用API提供的props，实现组件的动态缓存</p>
-</blockquote>
-<p>具体参考 <a href="https://cn.vuejs.org/v2/api/#keep-alive">官方API</a></p>
-<h5 id="k18">18. Vue 中 key 的作用</h5>
-
-<blockquote>
-<p><code>key</code> 的特殊属性主要用在 <code>Vue</code> 的虚拟 <code>DOM</code> 算法，在新旧 <code>nodes</code> 对比时辨识 <code>VNodes</code>。如果不使用 <code>key</code>，<code>Vue</code> 会使用一种最大限度减少动态元素并且尽可能的尝试修复/再利用相同类型元素的算法。使用 <code>key</code>，它会基于 <code>key</code> 的变化重新排列元素顺序，并且会移除 <code>key</code> 不存在的元素。</p>
-</blockquote>
-<blockquote>
-<p>有相同父元素的子元素必须有独特的 <code>key</code>。重复的 <code>key</code> 会造成渲染错误</p>
-</blockquote>
-<p>具体参考 <a href="https://cn.vuejs.org/v2/api/#key">官方API</a></p>
-<h5 id="k19">19. Vue 的核心是什么</h5>
-
-<blockquote>
-<p>数据驱动 组件系统</p>
-</blockquote>
-<h5 id="k20">20. vue 等单页面应用的优缺点</h5>
-
-<blockquote>
-<p>优点：</p>
-</blockquote>
-<ul>
-<li>良好的交互体验 </li>
-<li>良好的前后端工作分离模式</li>
-<li>减轻服务器压力</li>
-</ul>
-<blockquote>
-<p>缺点：</p>
-</blockquote>
-<ul>
-<li><code>SEO</code> 难度较高</li>
-<li>前进、后退管理 </li>
-<li>初次加载耗时多 </li>
-</ul>
-<h5 id="k21">21. vue-router 使用params与query传参有什么区别</h5>
-
-<p><code>vue-router</code> 可以通过 <code>params</code> 与 <code>query</code> 进行传参</p>
-<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 传递</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'./xxx'</span><span class="token punctuation">,</span> params<span class="token operator">:</span> <span class="token punctuation">{</span>xx<span class="token operator">:</span>xxx<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'./xxx'</span><span class="token punctuation">,</span> query<span class="token operator">:</span> <span class="token punctuation">{</span>xx<span class="token operator">:</span>xxx<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-<span class="token comment">// 接收</span>
-<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params
-
-<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><code>params</code> 是路由的一部分,必须要有。<code>query</code> 是拼接在 <code>url</code> 后面的参数，没有也没关系</li>
-<li><code>params</code> 不设置的时候，刷新页面或者返回参数会丢，<code>query</code> 则不会有这个问题</li>
-</ul>
-]]></content>
-      <categories>
-        <category>面试</category>
-        <category>Vue</category>
-      </categories>
-      <tags>
-        <tag>Vue</tag>
-        <tag>面试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>在微信小程序中引入 Iconfont 阿里巴巴图标</title>
-    <url>/posts/73f0/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
-<p>在<code>小程序</code>中，有默认的图标<code>icon</code>组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标</p>
-<p>下面，就让我们一起去研究一下怎么引入<code>Iconfont </code>阿里巴巴图标</p>
-</blockquote>
-
-<p>以下↓</p>
-<blockquote>
-<p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便捷工具</p>
-</blockquote>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><blockquote>
-<p>1.首先需要小伙伴自行在微信开发工具中创建一个项目<br>2.需要注册一个<a href="https://www.iconfont.cn/">iconfont</a>账号，后面要用到</p>
-</blockquote>
-<h3 id="保存图标到到购物车-并添加至项目"><a href="#保存图标到到购物车-并添加至项目" class="headerlink" title="保存图标到到购物车,并添加至项目"></a>保存图标到到购物车,并添加至项目</h3><p><img src="https://img-blog.csdnimg.cn/20200602182454748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<blockquote>
-<p>随便找几个图标加入购物车<br>点击右上角购物车会出现如下图：<br><img src="https://img-blog.csdnimg.cn/20200602183454854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>然后点击<code>添加至项目</code>添加至项目（如果没有项目,可自行创建一个,我这儿创建了一个probject）<br>然后点击上方图标管理并找到我的项目就能看到刚刚的图标了<br>点击查看在线链接并生成代码,就能看到下图<br><img src="https://img-blog.csdnimg.cn/20200602184011725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-</blockquote>
-<h3 id="引入到图标小程序中"><a href="#引入到图标小程序中" class="headerlink" title="引入到图标小程序中"></a>引入到图标小程序中</h3><blockquote>
-<p>打开小程序删除多余文件,样式等<br>Unicode获取</p>
-</blockquote>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.css 复制上面的查看链接代码*/</span>
- @font<span class="token operator">-</span>face <span class="token punctuation">{</span>
-  font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>  <span class="token comment">/* project id 1858720 */</span>
-  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
-  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token comment">/*设置一些样式*/</span>
-<span class="token punctuation">.</span>iconfont<span class="token punctuation">{</span>
-   font<span class="token operator">-</span>family<span class="token operator">:</span><span class="token string">"iconfont"</span><span class="token punctuation">;</span> <span class="token comment">/*需要与@font-face的font-family一样*/</span>
-   color<span class="token operator">:</span> red<span class="token punctuation">;</span>
-   font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">.</span>icon<span class="token operator">-</span>success<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
-  content<span class="token operator">:</span> <span class="token string">'\e6a1'</span><span class="token punctuation">;</span> <span class="token comment">/*Unicode获取方式请看下文*/</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">.</span>icon<span class="token operator">-</span>search<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
-  content<span class="token operator">:</span> <span class="token string">'\e6a2'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token punctuation">.</span>icon<span class="token operator">-</span>news<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
-  content<span class="token operator">:</span> <span class="token string">'\e6a3'</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.wxml*/</span>
-<span class="token operator">&lt;</span>view<span class="token operator">&gt;</span>
-	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
-	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-search"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
-	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-news"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
-<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>效果如下:<br><img src="https://img-blog.csdnimg.cn/20200602184741127.png" alt="在这里插入图片描述"><br>如上图，我们可以看到已经成功引入刚刚所收藏的图标</p>
-</blockquote>
-<h3 id="Unicode获取方式"><a href="#Unicode获取方式" class="headerlink" title="Unicode获取方式"></a>Unicode获取方式</h3><blockquote>
-<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>'\e6a1'</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="在这里插入图片描述"></p>
-</blockquote>
-<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接:"></a>友情链接:</h3><p><strong><a href="https://www.iconfont.cn/">iconfont</a><br>   <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">小程序文档</a></strong></p>
-]]></content>
-      <categories>
-        <category>小程序</category>
-        <category>Iconfont</category>
-      </categories>
-      <tags>
-        <tag>小程序</tag>
-        <tag>Iconfont</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端面试题-Webpack</title>
     <url>/posts/a8fd7b10/</url>
     <content><![CDATA[<h3>目录</h3>
@@ -1157,6 +813,77 @@ module<span class="token punctuation">.</span>exports <span class="token operato
       </tags>
   </entry>
   <entry>
+    <title>在微信小程序中引入 Iconfont 阿里巴巴图标</title>
+    <url>/posts/73f0/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote><p>如果文章中有出现纰漏、错误之处，还请看到的小伙伴多多指教，先行谢过</p>
+<p>在<code>小程序</code>中，有默认的图标<code>icon</code>组件，但你会发现它的图标样式很少，可能很多时候并不能满足我们的需求，这时候我们就需要引入外部的一些图标</p>
+<p>下面，就让我们一起去研究一下怎么引入<code>Iconfont </code>阿里巴巴图标</p>
+</blockquote>
+
+<p>以下↓</p>
+<blockquote>
+<p>Iconfont-国内功能很强大且图标内容很丰富的矢量图标库,提供矢量图标下载、在线存储、格式转换等功能。阿里巴巴体验团队倾力打造,设计和前端开发的便捷工具</p>
+</blockquote>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><blockquote>
+<p>1.首先需要小伙伴自行在微信开发工具中创建一个项目<br>2.需要注册一个<a href="https://www.iconfont.cn/">iconfont</a>账号，后面要用到</p>
+</blockquote>
+<h3 id="保存图标到到购物车-并添加至项目"><a href="#保存图标到到购物车-并添加至项目" class="headerlink" title="保存图标到到购物车,并添加至项目"></a>保存图标到到购物车,并添加至项目</h3><p><img src="https://img-blog.csdnimg.cn/20200602182454748.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="查看上图"></p>
+<blockquote>
+<p>随便找几个图标加入购物车<br>点击右上角购物车会出现如下图：<br><img src="https://img-blog.csdnimg.cn/20200602183454854.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="查看上图"><br>然后点击<code>添加至项目</code>添加至项目（如果没有项目,可自行创建一个,我这儿创建了一个probject）<br>然后点击上方图标管理并找到我的项目就能看到刚刚的图标了<br>点击查看在线链接并生成代码,就能看到下图<br><img src="https://img-blog.csdnimg.cn/20200602184011725.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MTk3NzYxOQ==,size_16,color_FFFFFF,t_70" alt="查看上图"></p>
+</blockquote>
+<h3 id="引入到图标小程序中"><a href="#引入到图标小程序中" class="headerlink" title="引入到图标小程序中"></a>引入到图标小程序中</h3><blockquote>
+<p>打开小程序删除多余文件,样式等<br>Unicode获取</p>
+</blockquote>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.css 复制上面的查看链接代码*/</span>
+ @font<span class="token operator">-</span>face <span class="token punctuation">{</span>
+  font<span class="token operator">-</span>family<span class="token operator">:</span> <span class="token string">'iconfont'</span><span class="token punctuation">;</span>  <span class="token comment">/* project id 1858720 */</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  src<span class="token operator">:</span> <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.eot?#iefix'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'embedded-opentype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff2'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.woff'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'woff'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.ttf'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'truetype'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token function">url</span><span class="token punctuation">(</span><span class="token string">'//at.alicdn.com/t/font_1858720_5spl0qiknij.svg#iconfont'</span><span class="token punctuation">)</span> <span class="token function">format</span><span class="token punctuation">(</span><span class="token string">'svg'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment">/*设置一些样式*/</span>
+<span class="token punctuation">.</span>iconfont<span class="token punctuation">{</span>
+   font<span class="token operator">-</span>family<span class="token operator">:</span><span class="token string">"iconfont"</span><span class="token punctuation">;</span> <span class="token comment">/*需要与@font-face的font-family一样*/</span>
+   color<span class="token operator">:</span> red<span class="token punctuation">;</span>
+   font<span class="token operator">-</span>size<span class="token operator">:</span> <span class="token number">40</span>rpx<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>success<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a1'</span><span class="token punctuation">;</span> <span class="token comment">/*Unicode获取方式请看下文*/</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>search<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a2'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token punctuation">.</span>icon<span class="token operator">-</span>news<span class="token operator">:</span><span class="token operator">:</span>before<span class="token punctuation">{</span>
+  content<span class="token operator">:</span> <span class="token string">'\e6a3'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"> <span class="token comment">/*index.wxml*/</span>
+<span class="token operator">&lt;</span>view<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-success"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-search"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+	<span class="token operator">&lt;</span>icon <span class="token keyword">class</span><span class="token operator">=</span><span class="token string">"iconfont icon-news"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>icon<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>view<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>效果如下:<br><img src="https://img-blog.csdnimg.cn/20200602184741127.png" alt="查看上图"><br>如上图，我们可以看到已经成功引入刚刚所收藏的图标</p>
+</blockquote>
+<h3 id="Unicode获取方式"><a href="#Unicode获取方式" class="headerlink" title="Unicode获取方式"></a>Unicode获取方式</h3><blockquote>
+<p>如下图点击复制代码会出现 <code>&amp;#xe6a1;</code><br>需要去掉一些没用的符号写成:<code>'\e6a1'</code> 放到css中就可以了，例如:<br>.icon-xxxx::before{<br>  content: ‘\e6a1’;<br>}<br><img src="https://img-blog.csdnimg.cn/20200602185558606.png" alt="查看上图"></p>
+</blockquote>
+<h3 id="友情链接"><a href="#友情链接" class="headerlink" title="友情链接:"></a>友情链接:</h3><p><strong><a href="https://www.iconfont.cn/">iconfont</a><br>   <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/">小程序文档</a></strong></p>
+]]></content>
+      <categories>
+        <category>小程序</category>
+        <category>Iconfont</category>
+      </categories>
+      <tags>
+        <tag>小程序</tag>
+        <tag>Iconfont</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>小程序面试题</title>
     <url>/posts/f86d3988/</url>
     <content><![CDATA[<h3>目录</h3>
@@ -1355,6 +1082,41 @@ wx<span class="token punctuation">.</span><span class="token function">redirectT
       <tags>
         <tag>面试</tag>
         <tag>小程序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常见代码规范</title>
+    <url>/posts/55bfc5cf/</url>
+    <content><![CDATA[<blockquote>
+<p>常见代码规范</p>
+</blockquote>
+<p>这里是配合 <code>vs-code</code> 定制的一份常用代码规则( <code>vue-cli3</code> 同步)</p>
+<p>使用 <code>Eslint</code>(侧重代码质量) 与 <code>prettier</code>(侧重代码格式) 让代码看起来更加优雅</p>
+<p>找到 <code>package.json</code> 文件中的 <code>eslintConfig</code> 删掉它(当然也可以不删，我有强迫症),将 <code>.eslintrc.js</code> 文件添加到项目根目录(如果根目录有这个文件，将里面的内容覆盖掉就可以了)</p>
+<p>主要就是为了添加这个规则，本身的校验规则在 <code>rules</code> 中添加修改就好, 完整 <code>Eslint</code>规则 参考 <a href="https://eslint.org/docs/rules/">这里</a><br><img src="data:image/jpg;base64,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" alt="原型链"></p>
+<p>接下来将 <code>prettier</code> 添加到项目的根目录中,完整 <code>prettier</code>规则 参考 <a href="https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode">这里</a></p>
+<p>这个时候其实是已经可以进行代码规范的校验了，我们运行 <code>npm run lint</code> 就会提示有错误的地方，并且格式化</p>
+<p>但是存在的问题是，现在每次校验错误，都必须先运行一次 <code>npm run lint</code>，并且在 .vue 文件中不能实时显示错误或者警告，这样就很不友好</p>
+<p>解决方法：</p>
+<p><code>Ctrl + Shift + P</code> 搜索 <code>setting</code> 设置选项，打开 <code>setting.json</code> 文件，在里面添加：</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token string">"editor.formatOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token string">"eslint.autoFixOnSave"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token string">"eslint.validate"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token string">"javascript"</span><span class="token punctuation">,</span>
+    <span class="token string">"javascriptreact"</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span>
+        <span class="token string">"language"</span><span class="token operator">:</span> <span class="token string">"vue"</span><span class="token punctuation">,</span>
+        <span class="token string">"autoFix"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这样，当我们书写完代码 只需要 <code>Ctrl + S</code> 保存一下，就可以自动格式化单个文件，并且能够实时检查 <code>.vue</code> 文件中的错误和警告</p>
+<p>好了，开始愉快地开发！</p>
+]]></content>
+      <categories>
+        <category>Eslint</category>
+      </categories>
+      <tags>
+        <tag>Eslint</tag>
       </tags>
   </entry>
   <entry>
@@ -2289,6 +2051,279 @@ console<span class="token punctuation">.</span><span class="token function">log<
       <tags>
         <tag>面试</tag>
         <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端面试题-Vue</title>
+    <url>/posts/f738ebc/</url>
+    <content><![CDATA[<h3>目录</h3>
+
+<p> <a href="#k1">1. 说一下Vue的双向绑定数据的原理</a></p>
+<p> <a href="#k2">2. 解释单向数据流和双向数据绑定</a></p>
+<p> <a href="#k3">3. Vue如何去除url中的 #</a></p>
+<p> <a href="#k4">4. 对 MVC、MVVM的理解</a></p>
+<p> <a href="#k5">5. 介绍虚拟DOM</a></p>
+<p> <a href="#k6">6. vue生命周期的理解</a></p>
+<p> <a href="#k7">7. 组件通信</a></p>
+<p> <a href="#k8">8. 路由实现</a></p>
+<p> <a href="#k9">9. v-if 和 v-show 区别</a></p>
+<p> <a href="#k10">10. $route和$router的区别</a></p>
+<p> <a href="#k11">11. NextTick 是做什么的</a></p>
+<p> <a href="#k12">12. Vue 组件 data 为什么必须是函数</a></p>
+<p> <a href="#k13">13. 计算属性computed 和事件 methods 有什么区别</a></p>
+<p> <a href="#k14">14. 对比 jQuery ，Vue 有什么优缺点</a></p>
+<p> <a href="#k15">15. Vue 中怎么自定义指令</a></p>
+<p> <a href="#k16">16. Vue 中怎么自定义过滤器</a></p>
+<p> <a href="#k17">17. 对 keep-alive 的了解</a></p>
+<p> <a href="#k18">18. Vue 中 key 的作用</a></p>
+<p> <a href="#k19">19. 你觉得 Vue 的核心是什么</a></p>
+<p> <a href="#k20">20. vue 等单页面应用的优缺点</a></p>
+<p> <a href="#k21">21. vue-router 使用params与query传参有什么区别</a></p>
+<h5 id="k1">1. 说一下Vue的双向绑定数据的原理</h5>
+
+<blockquote>
+<p><code>vue</code> 实现数据双向绑定主要是：采用数据劫持结合发布者-订阅者模式的方式，通过 <code>Object.defineProperty()</code> 来劫持各个属性的 <code>setter</code>，<code>getter</code>，在数据变动时发布消息给订阅者，触发相应监听回调</p>
+</blockquote>
+<h5 id="k2">2. 解释单向数据流和双向数据绑定</h5>
+
+<blockquote>
+<p>单向数据流： 顾名思义，数据流是单向的。数据流动方向可以跟踪，流动单一，追查问题的时候可以更快捷。缺点就是写起来不太方便。要使UI发生变更就必须创建各种 <code>action</code> 来维护对应的 <code>state</code></p>
+</blockquote>
+<blockquote>
+<p>双向数据绑定：数据之间是相通的，将数据变更的操作隐藏在框架内部。优点是在表单交互较多的场景下，会简化大量业务无关的代码。缺点就是无法追踪局部状态的变化，增加了出错时 <code>debug</code> 的难度</p>
+</blockquote>
+<h5 id="k3">3. Vue 如何去除url中的 #</h5>
+
+<p><code>vue-router</code> 默认使用 <code>hash</code> 模式，所以在路由加载的时候，项目中的 <code>url</code> 会自带 <code>#</code>。如果不想使用 <code>#</code>， 可以使用 <code>vue-router</code> 的另一种模式 <code>history</code></p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token keyword">new</span> <span class="token class-name">Router</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  mode<span class="token operator">:</span> <span class="token string">'history'</span><span class="token punctuation">,</span>
+  routes<span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token punctuation">]</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>需要注意的是，当我们启用 <code>history</code> 模式的时候，由于我们的项目是一个单页面应用，所以在路由跳转的时候，就会出现访问不到静态资源而出现 <code>404</code> 的情况，这时候就需要服务端增加一个覆盖所有情况的候选资源：如果 <code>URL</code> 匹配不到任何静态资源，则应该返回同一个 <code>index.html</code> 页面</p>
+</blockquote>
+<h5 id="k4">4. 对 MVC、MVVM的理解</h5>
+
+<blockquote>
+<p>MVC</p>
+</blockquote>
+<p><img src="data:image/png;base64,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0jY/kkWySBbJStvriC0bAZJFskhW2uZHskgWySJZaXsdsWUjQLJIFslK2/xIFskiWSQrba8jtmwESBbJIllpmx/JIlkki2Sl7XXElo0AySJZJCtt8yNZJItkkay0vY7YshEgWSSLZKVtfiSLZJEskpW21xFbNgIki2SRrLTNj2SRLJJFstL2OmLLRoBkkSySlbb5kSySRbJIVtpeR2zZCJAskkWy0jY/kkWySBbJStvriC0bAZJFskhW2uZHskgWySJZaXsdsWUjQLJIFslK2/xIFskiWSQrba8jtmwESBbJIllpmx/JIlkki2Sl7XXElo0AySJZJCtt8yNZJItkkay0vY7YshEgWSSLZKVtfiSLZJEskpW21xFbNgIki2SRrLTNj2SRLJJFstL2OmLLRoBkkSySlbb5kSySRbJIVtpeR2zZCJAskkWy0jY/kkWySBbJStvriC0bAZJFskhW2uZHskgWySJZaXsdsWUjQLJIFslK2/xIFskiWSQrba8jtmwESBbJIllpmx/JIlkki2Sl7XXElo0AySJZJCtt8yNZJItkkay0vY7YshEgWSSLZKVtfiSLZJEskpW21xFbNgIki2SRrLTNj2SRLJJFstL2OmLLRoBkkSySlbb5kSySRbJIVtpeR2zZCJAskkWy0jY/kkWySBbJStvriC0bAZJFskhW2uZHskgWySJZaXsdsWUjQLJIFslK2/xIFskiWSQrba8jtmwESBbJIllpmx/JIlkki2Sl7XXElo0AySJZJCtt8yNZ55LV73z8+7kGg+eaDz94L22LFBsCEQlo0/q1MXVAvzddIyRZJItM7agDOpvpOhsh5Scw5hese4iYfm+6tkqySBbJIlnT9ShCKpoAgSJQY+oAyZquGZMskkWySNZ0PYqQiiYw5hese4gYyZquGS9Wsn7z7q8aHwz21YHf/e7/pmttQkIgM4F99d33+sRQB/R70zXUxUrWdAiFhAACCCCAAAIIbBIgWWoFAggggAACCCAQgQDJigBVkAgggAACCCCAAMlSBxBAAAEEEEAAgQgESFYEqIJEAAEEEEAAAQRIljqAAAIIIIAAAghEIECyIkAVJAIIIIAAAgggQLLUAQQQQAABBBBAIAIBkhUBqiARQAABBBBAAAGSpQ4ggAACCCCAAAIRCJCsCFAFiQACCCCAAAIIkCx1AAEEEEAAAQQQiECAZEWAKkgEEEAAAQQQQIBkqQMIIIAAAggggEAEAiQrAlRBIoAAAggggAACJEsdQAABBBBAAAEEIhAgWRGgChIBBBBAAAEEECBZ6gACCCCAAAIIIBCBAMmKAFWQCCCAAAIIIIAAyVIHEEAAAQQQQACBCARIVgSogkQAAQQQQAABBEiWOoAAAggggAACCEQgQLIiQBUkAggggAACCCBAstQBBBBAAAEEEEAgAgGSFQGqIBFAAAEEEEAAAZKlDiCAAAIIIIAAAhEIkKwIUAWJAAIIIIAAAgiQLHUAAQQQQAABBBCIQIBkRYAqSAQQQAABBBBAgGSpAwgggAACCCCAQAQCJCsCVEEigAACCCCAAAIkSx1AAAEEEEAAAQQiECBZEaAKEgEEEEAAAQQQIFnqAAIIIIAAAgggEIEAyYoAVZAIIIAAAggggADJUgcQQAABBBBAAIEIBEhWBKiCRAABBBBAAAEESJY6gAACCCCAAAIIRCBAsiJAFSQCCCCAAAIIIECy1AEEEEAAAQQQQCACAZIVAaogEUAAAQQQQAABkqUOIIAAAggggAACEQiQrAhQBYkAAggggAACCJAsdQABBBBAAAEEEIhAgGRFgCpIBBBAAAEEEECAZKkDCCCAAAIIIIBABAIkKwJUQSKAAAIIIIAAAiRLHUAAAQQQQAABBCIQIFkRoAoSAQQQQAABBBAgWeoAAggggAACCCAQgQDJigBVkAgggAACCCCAAMlSBxBAAAEEEEAAgQgESFYEqIJEAAEEEEAAAQRIljqAAAIIIIAAAghEIECyIkAVJAIIIIAAAgggQLLUAQQQQAABBBBAIAIBkhUBqiARQAABBBBAAAGSpQ4ggAACCCCAAAIRCJCsCFAFiQACCCCAAAIIkCx1AAEEEEAAAQQQiECAZEWAKkgEEEAAAQQQQIBkqQMIIIAAAggggEAEAv8PpncQBKCuzkwAAAAASUVORK5CYII=" alt="image"></p>
+<p>特点：</p>
+<ol>
+<li><code>View</code> 传送指令到 <code>Controller</code></li>
+<li><code>Controller</code> 完成业务逻辑后，要求 <code>Model</code> 改变状态</li>
+<li><code>Model</code> 将新的数据发送到 <code>View</code>，用户得到反馈</li>
+</ol>
+<p><strong>所有通信都是单向的</strong></p>
+<blockquote>
+<p>MVVM</p>
+</blockquote>
+<p><img src="data:image/png;base64,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" alt="image"></p>
+<p>特点： </p>
+<ol>
+<li>各部分之间的通信，都是双向的</li>
+<li>采用双向绑定：<code>View</code> 的变动，自动反映在 <code>ViewModel</code>，反之亦然</li>
+</ol>
+<p>具体请移步 <a href="http://www.ruanyifeng.com/blog/2015/02/mvcmvp_mvvm.html">这里</a></p>
+<h5 id="k5">5. 介绍虚拟DOM</h5>
+
+<p><a href="https://www.jianshu.com/p/616999666920">参考这里</a></p>
+<h5 id="k6">6. vue生命周期的理解</h5>
+
+<blockquote>
+<p>vue实例有一个完整的生命周期，生命周期也就是指一个实例从开始创建到销毁的这个过程</p>
+</blockquote>
+<ul>
+<li><code>beforeCreate()</code> 在实例创建之间执行，数据未加载状态</li>
+<li><code>created()</code> 在实例创建、数据加载后，能初始化数据，<code>dom</code>渲染之前执行</li>
+<li><code>beforeMount()</code> 虚拟<code>dom</code>已创建完成，在数据渲染前最后一次更改数据</li>
+<li><code>mounted()</code> 页面、数据渲染完成，真实<code>dom</code>挂载完成</li>
+<li><code>beforeUpadate()</code> 重新渲染之前触发</li>
+<li><code>updated()</code> 数据已经更改完成，<code>dom</code> 也重新 <code>render</code> 完成,更改数据会陷入死循环</li>
+<li><code>beforeDestory()</code> 和 <code>destoryed()</code> 前者是销毁前执行（实例仍然完全可用），后者则是销毁后执行</li>
+</ul>
+<h5 id="k7">7. 组件通信</h5>
+
+<blockquote>
+<p>父组件向子组件通信</p>
+</blockquote>
+<p>子组件通过 <code>props</code> 属性，绑定父组件数据，实现双方通信</p>
+<blockquote>
+<p>子组件向父组件通信</p>
+</blockquote>
+<p>将父组件的事件在子组件中通过 <code>$emit</code> 触发</p>
+<blockquote>
+<p>非父子组件、兄弟组件之间的数据传递</p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">/*新建一个Vue实例作为中央事件总嫌*/</span>
+<span class="token keyword">let</span> event <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Vue</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*监听事件*/</span>
+event<span class="token punctuation">.</span><span class="token function">$on</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">val</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">//......do something</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">/*触发事件*/</span>
+event<span class="token punctuation">.</span><span class="token function">$emit</span><span class="token punctuation">(</span><span class="token string">'eventName'</span><span class="token punctuation">,</span> <span class="token string">'this is a message.'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>Vuex 数据管理</p>
+</blockquote>
+<h5 id="k8">8. vue-router 路由实现</h5>
+
+<blockquote>
+<p>路由就是用来跟后端服务器进行交互的一种方式，通过不同的路径，来请求不同的资源，请求不同的页面是路由的其中一种功能</p>
+</blockquote>
+<p>参考 <a href="https://zhuanlan.zhihu.com/p/37730038">这里</a></p>
+<h5 id="k9">9. v-if 和 v-show 区别</h5>
+
+<blockquote>
+<p>使用了 <code>v-if</code> 的时候，如果值为 <code>false</code> ，那么页面将不会有这个 <code>html</code> 标签生成。</p>
+</blockquote>
+<blockquote>
+<p><code>v-show</code> 则是不管值为 <code>true</code> 还是 <code>false</code> ，<code>html</code> 元素都会存在，只是 <code>CSS</code> 中的 <code>display</code> 显示或隐藏</p>
+</blockquote>
+<h5 id="k10">10. $route和$router的区别</h5>
+
+<blockquote>
+<p><code>$router</code> 为 <code>VueRouter</code> 实例，想要导航到不同 <code>URL</code>，则使用 <code>$router.push</code> 方法</p>
+</blockquote>
+<blockquote>
+<p><code>$route</code> 为当前 <code>router</code> 跳转对象里面可以获取 <code>name</code> 、 <code>path</code> 、 <code>query</code> 、 <code>params</code> 等</p>
+</blockquote>
+<h5 id="k11">11. NextTick 是做什么的</h5>
+
+<blockquote>
+<p><code>$nextTick</code> 是在下次 <code>DOM</code> 更新循环结束之后执行延迟回调，在修改数据之后使用 <code>$nextTick</code>，则可以在回调中获取更新后的 <code>DOM</code></p>
+</blockquote>
+<p>具体可参考官方文档 <a href="https://cn.vuejs.org/v2/guide/reactivity.html">深入响应式原理</a></p>
+<h5 id="k12">12. Vue 组件 data 为什么必须是函数</h5>
+
+<blockquote>
+<p>因为js本身的特性带来的，如果 <code>data</code> 是一个对象，那么由于对象本身属于引用类型，当我们修改其中的一个属性时，会影响到所有Vue实例的数据。如果将 <code>data</code> 作为一个函数返回一个对象，那么每一个实例的 <code>data</code> 属性都是独立的，不会相互影响了</p>
+</blockquote>
+<h5 id="k13">13. 计算属性computed 和事件 methods 有什么区别</h5>
+
+<p>我们可以将同一函数定义为一个 <code>method</code> 或者一个计算属性。对于最终的结果，两种方式是相同的</p>
+<p>不同点：</p>
+<blockquote>
+<p>computed: 计算属性是基于它们的依赖进行缓存的,只有在它的相关依赖发生改变时才会重新求值</p>
+</blockquote>
+<blockquote>
+<p>对于 <code>method</code> ，只要发生重新渲染，<code>method</code> 调用总会执行该函数</p>
+</blockquote>
+<h5 id="k14">14. 对比 jQuery ，Vue 有什么不同</h5>
+
+<blockquote>
+<p><code>jQuery</code> 专注视图层，通过操作 <code>DOM</code> 去实现页面的一些逻辑渲染； <code>Vue</code> 专注于数据层，通过数据的双向绑定，最终表现在 <code>DOM</code> 层面，减少了 <code>DOM</code> 操作</p>
+</blockquote>
+<blockquote>
+<p><code>Vue</code> 使用了组件化思想，使得项目子集职责清晰，提高了开发效率，方便重复利用，便于协同开发</p>
+</blockquote>
+<h5 id="k15">15. Vue 中怎么自定义指令</h5>
+
+<blockquote>
+<p>全局注册</p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 注册一个全局自定义指令 `v-focus`</span>
+Vue<span class="token punctuation">.</span><span class="token function">directive</span><span class="token punctuation">(</span><span class="token string">'focus'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 当被绑定的元素插入到 DOM 中时……</span>
+  <span class="token function-variable function">inserted</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 聚焦元素</span>
+    el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>局部注册</p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">directives<span class="token operator">:</span> <span class="token punctuation">{</span>
+  focus<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 指令的定义</span>
+    <span class="token function-variable function">inserted</span><span class="token operator">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      el<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>参考 <a href="https://cn.vuejs.org/v2/guide/custom-directive.html">官方文档-自定义指令</a></p>
+<h5 id="k16">16. Vue 中怎么自定义过滤器</h5>
+
+<blockquote>
+<p>可以用全局方法 <code>Vue.filter()</code> 注册一个自定义过滤器，它接收两个参数：过滤器 <code>ID</code> 和过滤器函数。过滤器函数以值为参数，返回转换后的值</p>
+</blockquote>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js">Vue<span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token string">'reverse'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> value<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- 'abc' =&gt; 'cba' --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">v-text</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>message | reverse<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>过滤器也同样接受全局注册和局部注册</p>
+<h5 id="k17">17. 对 keep-alive 的了解</h5>
+
+<blockquote>
+<p><code>keep-alive</code> 是 <code>Vue</code> 内置的一个组件，可以使被包含的组件保留状态，或避免重新渲染</p>
+</blockquote>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>keep-alive</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>component</span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- 该组件将被缓存！ --&gt;</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>component</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>keep-alive</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>可以使用API提供的props，实现组件的动态缓存</p>
+</blockquote>
+<p>具体参考 <a href="https://cn.vuejs.org/v2/api/#keep-alive">官方API</a></p>
+<h5 id="k18">18. Vue 中 key 的作用</h5>
+
+<blockquote>
+<p><code>key</code> 的特殊属性主要用在 <code>Vue</code> 的虚拟 <code>DOM</code> 算法，在新旧 <code>nodes</code> 对比时辨识 <code>VNodes</code>。如果不使用 <code>key</code>，<code>Vue</code> 会使用一种最大限度减少动态元素并且尽可能的尝试修复/再利用相同类型元素的算法。使用 <code>key</code>，它会基于 <code>key</code> 的变化重新排列元素顺序，并且会移除 <code>key</code> 不存在的元素。</p>
+</blockquote>
+<blockquote>
+<p>有相同父元素的子元素必须有独特的 <code>key</code>。重复的 <code>key</code> 会造成渲染错误</p>
+</blockquote>
+<p>具体参考 <a href="https://cn.vuejs.org/v2/api/#key">官方API</a></p>
+<h5 id="k19">19. Vue 的核心是什么</h5>
+
+<blockquote>
+<p>数据驱动 组件系统</p>
+</blockquote>
+<h5 id="k20">20. vue 等单页面应用的优缺点</h5>
+
+<blockquote>
+<p>优点：</p>
+</blockquote>
+<ul>
+<li>良好的交互体验 </li>
+<li>良好的前后端工作分离模式</li>
+<li>减轻服务器压力</li>
+</ul>
+<blockquote>
+<p>缺点：</p>
+</blockquote>
+<ul>
+<li><code>SEO</code> 难度较高</li>
+<li>前进、后退管理 </li>
+<li>初次加载耗时多 </li>
+</ul>
+<h5 id="k21">21. vue-router 使用params与query传参有什么区别</h5>
+
+<p><code>vue-router</code> 可以通过 <code>params</code> 与 <code>query</code> 进行传参</p>
+<pre class="line-numbers language-js" data-language="js"><code class="language-js"><span class="token comment">// 传递</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'./xxx'</span><span class="token punctuation">,</span> params<span class="token operator">:</span> <span class="token punctuation">{</span>xx<span class="token operator">:</span>xxx<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>path<span class="token operator">:</span> <span class="token string">'./xxx'</span><span class="token punctuation">,</span> query<span class="token operator">:</span> <span class="token punctuation">{</span>xx<span class="token operator">:</span>xxx<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+<span class="token comment">// 接收</span>
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>params
+
+<span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span>query<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>params</code> 是路由的一部分,必须要有。<code>query</code> 是拼接在 <code>url</code> 后面的参数，没有也没关系</li>
+<li><code>params</code> 不设置的时候，刷新页面或者返回参数会丢，<code>query</code> 则不会有这个问题</li>
+</ul>
+]]></content>
+      <categories>
+        <category>面试</category>
+        <category>Vue</category>
+      </categories>
+      <tags>
+        <tag>Vue</tag>
+        <tag>面试</tag>
       </tags>
   </entry>
 </search>
